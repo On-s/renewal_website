@@ -7,7 +7,7 @@
 /* basic area */
 @import url("../header.css");
 @import url("../footer.css");
-@import url("./b_basic_layout.css");
+@import url("./b_basic_layout_main.css");
 
 /* c_smartphone-v ~479 */
 @import url("./c_phone_v.css");
