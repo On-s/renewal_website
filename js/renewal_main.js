@@ -1,4 +1,8 @@
-document.cookie ='cross-site-cookie=bar; SameSite=None; Secure'; 
+
+document.cookie = "SameSite=Lax; Secure";
+
+
+
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";

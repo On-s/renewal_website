@@ -1,0 +1,22 @@
+/* layout_009_resto.css */
+
+/* Guide */
+@import url("../font.css");
+@import url("../variable.css");
+
+/* basic area */
+@import url("../basic_header.css");
+@import url("../basic_footer.css");
+@import url("./b_basic_layout.css");
+
+/* c_smartphone-v ~479 */
+@import url("./c_phone_v.css");
+/* d_smartphone-h 480~767*/
+@import url("./d_phone_h.css");
+/* e_table 768~1279*/
+@import url("./e_tablet.css");
+/* f_laptop 1280~1599*/
+@import url("./f_laptop.css");
+/* g_pc 1600 ~ */
+@import url("./g_pc.css");
+
