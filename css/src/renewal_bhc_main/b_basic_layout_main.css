@@ -204,19 +204,28 @@
   text-align: center;
   font-size: var(--font-size6-);
   line-height: 50px;
-  background-color: #fff;
   box-sizing: border-box;
   padding: 50px 200px;
-  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1); ;
+  background-image: url('../../../res/image/aboutus2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--color-bhc-white);
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
 }
+/* .about::before{
+  content:""; 
+  display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);
+} */
+
 .about >  p {
   width: 80%;
   margin: auto;
   margin-top: 50px;
   margin-top: 3.125rem;
   line-height: 32px;
-  font-family:'Malgun Gothic';
-  font-size: var(--font-size3-);
+  font-size: var(--font-size4-);
 }
 
 /* notice_area ----------------------------------------- */

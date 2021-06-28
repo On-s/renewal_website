@@ -18,6 +18,7 @@ footer {
     .company_area > ul > li{
       float: left;
       padding: 10px 20px;
+      border-left: 3px solid var(--color-bhc-brown3);
     }
   
     .family_site{

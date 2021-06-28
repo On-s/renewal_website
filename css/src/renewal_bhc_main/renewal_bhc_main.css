@@ -1,14 +1,16 @@
 /* layout_009_resto.css */
 
+/* common area ------------------------------------- */
 /* Guide */
-@import url("../font.css");
-@import url("../variable.css");
+@import url("../common_area/font.css");
+@import url("../common_area/variable.css");
+/* area */
+@import url("../common_area/header.css");
+@import url("../common_area/footer.css");
+/* -------------------------------------------------- */
 
-/* basic area */
-@import url("../header.css");
-@import url("../footer.css");
+/* main_common */
 @import url("./b_basic_layout_main.css");
-
 /* c_smartphone-v ~479 */
 @import url("./c_phone_v.css");
 /* d_smartphone-h 480~767*/
