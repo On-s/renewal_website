@@ -1,0 +1,447 @@
+
+.wrap { 
+    position: relative;
+    width: 100%;
+    min-width: 360px;
+    height: auto;
+    min-height: 1000px;
+    background-color: var(--color-bhc-white);
+    overflow: hidden;
+}
+
+/* header ------------------------------------- */
+header {
+    position: fixed; top: 0; left: 0; z-index: 200;
+    width: 100%;
+    background-color: rgba(242,242,242,0.8);
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+    #headBox {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    h1{
+        float: left;
+    }
+    h1 a {
+        float: left;
+        width: 80px; height: 50px;
+        background-image: url("../../../../res/renewal_bhc/logo.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 0;
+    }
+    abbr {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .main_menu > li  {
+        float:left;
+        position: relative;
+        margin-top: 20px;
+        margin-right: 0.725rem;
+        color: var(--color-bhc-font1);
+        font-family: 'BM HANNA Pro';
+        font-size: var(--font-size4-);
+    }
+    .main_menu > li:nth-child(1)  {
+        margin-left: 20px;
+        border-left: 3px solid var(--color-bhc-brown3);
+        padding-left: 20px;
+    }
+
+    .sub_menu {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in;
+    }
+
+    .main_menu > li:hover .sub_menu,
+    .main_menu > li:focus .sub_menu{
+        visibility: visible;
+        opacity: 1;
+    }
+    .sub_menu > li {
+        width: 110px;
+        height: 30px;
+        background-color: var(--color-bhc-brown3);
+        color : var(--color-white);
+        text-align: center;
+        /* border-radius: 0.3rem; */
+        font-family: 'Malgun Gothic';
+        font-size: var(--font-size2-);
+    }
+ 
+    .sub-menu > li >  a:hover {
+        text-decoration: underline;
+    }
+
+    .nav_btn {
+      float: right;
+      background-image: url("../../../../res/renewal_bhc/menu.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+    }
+    .searchBox {
+      float: right;
+      width: 40px;
+      height: 40px;
+      margin-top: -5px;
+      margin-right: 30px;
+      background-image: url("../../../../res/renewal_bhc/search2.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+    }
+
+    .userBox {
+        float: right;
+        border-radius: 0 0 15px 15px;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        font-family: 'Malgun Gothic';
+        font-size: var(--font-size-1);
+    }
+    .login_ico {
+      width: 40px;
+      height: 40px;
+      transform: scale(1.5);
+      background-image: url("../../../../res/renewal_bhc/user_black.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0 0;
+    }
+
+
+/* adBox ----------------------------------------- */
+#adBox {
+  position: relative;
+  width: 100%;
+
+  }
+  .ad_area{
+    /* position: absolute; z-index: -100; */
+    width: 100%;
+    /* background-color: var(--color-gray2); */
+    background-image: url("../../../../res/renewal_bhc/img_main_banner_210415_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    box-sizing: border-box;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
+    3px 3px 5px rgba(0, 0, 0, 0.1);;
+  }
+  .ad_btn_before, .ad_btn_next {
+    background-repeat: no-repeat;
+      background-size: auto auto;
+      background-position: 0 0;
+  }
+
+  .ad_btn_before{
+      float: left;
+      background-image: url("../../../../res/renewal_bhc/left_btn.png");
+  }
+  .ad_btn_next {
+      float: right;
+      background-image: url("../../../../res/renewal_bhc/right_btn.png");
+  }
+
+/* ckmenuBox ----------------------------------------- */
+#ckmenuBox {
+  width: 80%;
+  margin: auto;
+  height: 300px;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.order_area{
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+  } 
+  .phone_order, .search_store {
+    background-color: var(--color-bhc-brown2);
+    color: var(--color-bhc-white);
+    border-radius: 0 5px 0 5px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'BM HANNA Pro';
+    font-size: var(--font-size3-);
+  }
+    .phone_order {
+      float: left;
+    }
+    .search_store {
+      float: right;
+    }
+
+  #ckmenu_area {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-bhc-white);
+    box-sizing: border-box;
+    box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
+      6px 6px 8px rgba(0, 0, 0, 0.1); 
+  }
+  .ckmenu_list {
+    position: absolute; left: 50%; top: 20%;
+    transform: translateX(-50%);
+  }
+   .ck_btn_before {
+    float: left;
+    background-image: url("../../../../res/renewal_bhc/left_btn.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+   }
+   .ck_btn_next {
+    float: right;
+    background-image: url("../../../../res/renewal_bhc/right_btn.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+   }
+   .ckmenu_list > ul { 
+     width: 100%;
+     height: auto;
+   }
+   .ckmenu_list > ul > li {
+    float: left;
+    width: 33.333%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+    text-align: center;
+    font-family: 'Malgun Gothic';
+    font-size: var(--font-size5-);
+   }
+
+   .ckmenu_list > ul > li:nth-child(1){
+     background-image: url("../../../../res/renewal_bhc/chicken/골드킹_410x271.png");
+   }
+   .ckmenu_list > ul > li:nth-child(2){
+    background-image: url("../../../../res/renewal_bhc/chicken/뿌링맵소킹\ 한마리\ 누끼sm.png");
+  }
+  .ckmenu_list > ul > li:nth-child(3){
+    background-image: url("../../../../res/renewal_bhc/chicken/뿌링클_410x271.png");
+
+  }
+/* videoBox -------------------------------------------------- */
+#video_area {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+  #player {
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%); 
+    width: 640px;
+    height: 360px;
+    box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
+    6px 6px 8px rgba(0, 0, 0, 0.1); ;
+  }
+
+/* bhc_info -------------------------------------------------- */
+
+/* 고정 배경화면 */
+#bhc_info {
+  position: relative; z-index: 100;
+  width: 100%;
+  height: auto;
+  margin-top: 250px;
+}
+
+#noticeBox{
+  width: 100%;
+  height: auto;
+}
+
+#noticeBox > ul > li {
+  position: absolute; top :0%; z-index: 100;
+  width: 26.333%;
+  height: 250px;
+  background-color: #111;
+  box-sizing: border-box;
+  padding: 2rem 4rem;
+  border-radius: 2rem 2rem 0 0;
+}
+#noticeBox > ul > li > dl > dt {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'BM HANNA Pro';
+}
+#noticeBox > ul > li> dl > dd {
+  color: var(--color-white);
+  font-family: 'Malgun Gothic';
+  line-height: 1.6rem;
+}
+
+
+#noticeBox > ul > li:nth-child(1) {
+  left: 10%; background-color: var(--color-bhc-green2);
+}
+#noticeBox > ul > li:nth-child(2) {
+  left: 50%; transform:translateX(-50%); background-color: var(--color-bhc-brown)
+}
+#noticeBox > ul > li:nth-child(3) {
+  right: 10%; background-color:var(--color-bhc-yellow);
+}
+
+#noticeBox > ul > li:hover{
+  top : -20%
+}
+
+
+.about {
+  position: relative; z-index: 200;
+  width: 100%;
+  height: 500px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-family: 'Malgun Gothic';
+  text-align: center;
+  font-size: var(--font-size6-);
+  line-height: 50px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 50px 200px;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1); ;
+}
+.about >  p {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-top: 3.125rem;
+  line-height: 32px;
+  font-family:'Malgun Gothic';
+  font-size: var(--font-size3-);
+}
+
+/* notice_area ----------------------------------------- */
+#sns_area {
+  position: relative;
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-top: 150px;
+}
+
+#snsBox{
+  width: 100%;
+  height: auto;
+}
+
+#snsBox > ul > li {
+  position: absolute; top: 0;
+  width: 33.333%;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 2rem 2rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+#snsBox > ul > li:nth-child(1) {left: -5%;}
+#snsBox > ul > li:nth-child(2) {left: 50%; transform:translateX(-50%)}
+#snsBox > ul > li:nth-child(3) {right: -5%;}
+
+#snsBox > ul > li > button {
+  display: block;
+  width: 80px; height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  margin: auto;
+}
+
+.facebook ,
+.instargram ,
+.kakao {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+}
+
+.facebook_icon{
+  background-image: url('../../../../res/renewal_bhc/btn_facebook_main.png');
+}
+.facebook {
+  background-image: url('../../../../res/renewal_bhc/event1.png')
+}
+.instargram_icon{ 
+  background-image: url('../../../../res/renewal_bhc/btn_instagram_main.png');
+}
+.instargram {
+  background-image: url('../../../../res/renewal_bhc/event2.jpg')
+}
+
+.kakao_icon{
+  background-image: url('../../../../res/renewal_bhc/btn_kakaoplus_main.png');
+}
+.kakao {
+  background-image: url('../../../../res/renewal_bhc/event3.jpg')
+}
+
+#snsBox > ul > li > div {
+  width: 100%;
+  height: 500px;
+  border-radius: 0 0 2rem 2rem;
+  background-color: var(--color-bhc-white);
+  box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
+      6px 6px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* footer -------------------------------------------------------- */
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-gray7);
+  margin-top: 50px;
+}
+
+  .company_area {
+    color:var(--color-white);
+    width: 80%;
+    margin: auto;
+  }
+  .company_area > ul{
+    width: 100%;
+    height: auto;
+  }
+  .company_area > ul > li{
+    float: left;
+    padding: 10px 20px;
+  }
+
+  .family_site{
+    float: left;
+  }
+
+  .company_info{
+    float: left;
+  }
+
+  .call_number {
+    position: absolute;
+    right: 5%;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    background-image: url('../../../../res/renewal_bhc/call_number.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }

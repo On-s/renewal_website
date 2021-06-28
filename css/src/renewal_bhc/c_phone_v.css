@@ -1,0 +1,208 @@
+/* renewal_bhc phone_v ~479 */
+/* 360 */
+@media screen and (max-width:479px) {
+  .wrap{
+    min-width: 360px;
+  }
+
+  /* header ------------------------------------- */
+  header {
+      width: 100%;
+      height: 50px;
+      height: 13.888888vw;
+      min-height: 52px;
+  }
+
+      #headBox {
+          width: 100%;
+          height: 100%; 
+          padding: 12px 20px; 
+      }
+
+      h1{
+        width: 50px; 
+        height: 30px;
+        height: 8.333333vw;
+        margin-top: -10px;
+      }
+
+      .nav_btn {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        line-height: 30px;
+      }
+
+      .main_menu {
+        display: none;
+      }
+
+      .searchBox {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      .userBox {
+        width: 90px;
+        height: 50px;
+        margin-top: 5px;
+      }
+      .login_ico {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+  /* adBox ----------------------------------------- */
+  #adBox {
+    width: 100%;
+    height: 400px; 
+    height: 111.111111vw;
+    padding-top: 50px;
+    padding-top: 13.88889vw;
+    margin-top: 30px;
+    }
+    .ad_area{
+        width: 100%;
+        height: 400px;
+        height: 111.111111vw;
+        padding: 180px 25px;
+        padding: 50vw 6.944444vw; 
+    }
+    .ad_btn_before{
+        width: 20px;
+        height: 100px;
+        height: 27.777778vw;
+    }
+    .ad_btn_next {
+        width: 20px;
+        height: 100px;
+        height: 27.777778vw;
+    }
+ 
+  /* ckmenuBox ----------------------------------------- */
+  #ckmenuBox {
+    width: 80%;
+    height: 400px; 
+    height: 111.111111vw;
+    margin-top: 50px;
+    padding: 20px 0;
+    padding: 5.55556vw 0;
+  }
+  .order_area{
+    height: 40px;
+    height: 11.111111vw;
+  } 
+    .phone_order , .search_store{
+      width: 80px;
+      height: 40px;
+      height: 11.111111vw;
+      line-height: 40px;
+      line-height: 11.111111vw;
+    }
+
+  #ckmenu_area {
+    width: 100%;
+    height: 300px;
+    height: 83.33333vw ;
+    margin-top: 20px;
+    padding: 50px 20px;
+  }
+
+   .ckmenu_list {
+     width: 70%;
+     height: 200px;
+     height: 55.555555vw;
+   }
+   .ckmenu_list > ul > li {
+    width: 100%;
+   }
+
+   .ckmenu_list > ul > li:nth-child(2){
+    display: none;
+  }
+  .ckmenu_list > ul > li:nth-child(3){
+     display: none;
+   }
+   .ck_btn_before {
+    width: 20px;
+    height: 80px;
+    height: 22.22222vw;
+    margin-top: 80px;
+    margin-top: 22.2222vw;
+   }
+   .ck_btn_next {
+    width: 20px;
+    height: 80px;
+    height: 22.22222vw;
+    margin-top: 80px;
+    margin-top: 22.2222vw;
+   }
+/* video---------------------------------- */
+   #video_area {
+    height: 100px;
+  }
+  #player{
+    width: 360px;
+    height: 200px;
+  }
+
+
+  /* bhc_info---------------------------------------------- */
+  #bhc_info {
+    width: 100%;
+    margin-top: 350px;
+  }
+
+    #noticeBox > ul > li {
+    width: 90%;
+    height: 200px;
+    height: 55.55555vw;
+    top: -15%;
+  }
+  #noticeBox > ul > li:nth-child(1){left: 5%;}
+  #noticeBox > ul > li:nth-child(2),
+  #noticeBox > ul > li:nth-child(3){
+    display: none;
+  }
+  .about{
+    padding: 10px 5px;
+    height: 600px;
+  }
+  .about >  p {margin-top: 20px;}
+  /* sns_area ----------------------------------------- */
+  #sns_area {
+    width: 80%;
+    height: 300px;
+    height: 83.33333vw;
+    margin-top: 50px;
+  }
+
+  #snsBox > ul > li {
+    width: 90%;
+    height: 80px;
+    height: 22.22222vw;
+    transform: translateX(10%);
+  }
+
+  #snsBox > ul > li:nth-child(2),
+  #snsBox > ul > li:nth-child(3){
+    display: none;
+  }
+  #snsBox > ul > li > button { margin-top: -20px;} 
+  #snsBox > ul > li > div {
+    height: 300px;
+  }
+  #noticeBox > ul > li:hover,
+    #noticeBox > ul > li:focus {
+    top : -35%
+    }
+/* footer----------------------------------------------------------- */
+  footer {
+    width: 100%;
+    height: 150px;
+    height: 41.66666667vw;
+  }
+
+  .call_number{display: none;}
+}
