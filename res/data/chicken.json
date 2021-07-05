@@ -1,0 +1,78 @@
+[{
+        "ckImg": "ck1.png",
+        "ckname": "골드킹",
+        "ckprice": "1000000",
+        "ckInfo": "단짠단짠 맛있는 골드킹",
+        "ckPopupLink": "http://naver.com"
+    },
+    {
+        "ckImg": "ck2.png",
+        "ckname": "뿌링맵소킹",
+        "ckprice": "2000000",
+        "ckInfo": "맛나게 매운 뿌링 맵소킹",
+        "ckPopupLink": "http://google.com"
+    },
+    {
+        "ckImg": "ck3.png",
+        "ckname": "하바네로 포테킹",
+        "ckprice": "3000000",
+        "ckInfo": "난 포테킹은 느끼하더라",
+        "ckPopupLink": "http://daum.net"
+    },
+    {
+        "ckImg": "ck4.png",
+        "ckname": "포테킹 콤보",
+        "ckprice": "4000000",
+        "ckInfo": "포테킹은 내취향아님",
+        "ckPopupLink": "#"
+    },
+    {
+        "ckImg": "ck5.png",
+        "ckname": "뿌링클", 
+        "ckprice": "4500000",
+        "ckInfo": "뿌링뿌링 뿌리링클",
+        "ckPopupLink": "#"
+    },
+    {
+        "ckImg": "ck6.png",
+        "ckname": "붐바스틱",
+        "ckprice": "4000000",
+        "ckInfo": "붐바스틱 붐바스틱 예에~",
+        "ckPopupLink": "#"
+    },
+    {
+        "ckImg": "ck7.png",
+        "ckname": "맛초킹 콤보",
+        "ckprice": "4000000",
+        "ckInfo": "매콤짭짤! 밥과 함께 먹기에 딱 좋은 완벽조합",
+        "ckPopupLink": "#"
+    },
+    {
+        "ckImg": "ck8.png",
+        "ckname": "양념 맵소킹",
+        "ckprice": "2000000",
+        "ckInfo": "맵긴함 ",
+        "ckPopupLink": "#"
+    },
+    {
+        "ckImg": "ck9.png",
+        "ckname": "핫 후라이드",
+        "ckprice": "4000000",
+        "ckInfo": "먹고 배아플수있음",
+        "ckPopupLink": "#"
+    },
+    {
+        "ckImg": "ck10.png",
+        "ckname": "펌치킨",
+        "ckprice": "4000000",
+        "ckInfo": "펌핀펌핀",
+        "ckPopupLink": "#"
+    },
+    {
+        "ckImg": "ck11.png",
+        "ckname": "맵스터 순살",
+        "ckprice": "7000000",
+        "ckInfo": "맵~~맵~",
+        "ckPopupLink": "#"
+    }
+]

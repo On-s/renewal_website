@@ -11,12 +11,12 @@
 /* main_common */
 @import url("./b_basic_layout_main.css");
 /* c_smartphone-v ~479 */
-@import url("./c_phone_v.css");
+/* @import url("./c_phone_v.css"); */
 /* d_smartphone-h 480~767*/
-@import url("./d_phone_h.css");
+/* @import url("./d_phone_h.css"); */
 /* e_table 768~1279*/
-@import url("./e_tabl.et.css");
+/* @import url("./e_tabl.et.css"); */
 /* f_laptop 1280~1599*/
-@import url("./f_laptop.css");
+/* @import url("./f_laptop.css"); */
 /* g_pc 1600 ~ */
-@import url("./g_pc.css");
+/* @import url("./g_pc.css"); */
