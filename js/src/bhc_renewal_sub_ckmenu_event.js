@@ -247,7 +247,7 @@
                 ckBg.css('display', 'none');
             }
         }
-
+        // 현재 메인 이미지 데이터 받아오기
         function ckData() {
             ckImg.attr('style', minImg.attr('style'));
             ckconP.text(mainP.text());
