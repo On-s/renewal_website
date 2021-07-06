@@ -23,47 +23,7 @@ for (var n = -3; n >= 0; n++) {
     var ckMenu = menu_part.find('.ckMenu');
     var sideMenu = menu_part.find('.sideMenu');
     var beerMenu = menu_part.find('.beerMenu');
-
-    // 메뉴 리스트 이동-----------------------------------------
-    var setlist = function () {
-      cleanLi();
-      set_li(bhcdata.length); // 길이만큼 li 생성
-      add_li(); // 맨뒤에있는 li 복사
-      subLi = subUl.find('li'); // li 설정 
-      setUlLiWidth(); //Ul 과 Li길이를 늘림
-      widthSubimg = sub_img.width(); // li 길이 구함
-      alink = subUl.find('li').children('a');
-      shiftleft(); //늘린길이만큼 다시 쉬프트 
-    }
-
-
-    // 치킨메뉴를 눌렀을경우 
-    ckMenu.on('click', function (e) {
-      e.preventDefault();
-      // 치킨메뉴랑 같으면 
-      if (bhcdata === data.ck) {
-        // 스탑
-        e.stopPropagation();
-      } else { //치킨메뉴랑 다를경우
-        // 실행
-        bhcdata = data.ck;
-        ckImgLink = '../res/image/chicken/';
-        setlist();
-      }
-    });
-
-    // 사이드 메뉴를 눌렀을경우
-    sideMenu.on('click', function (e) {
-      e.preventDefault();
-      if (bhcdata === data.side) {
-        e.stopPropagation();
-      } else {
-        bhcdata = data.side;
-        ckImgLink = '../res/image/side/';
-        setlist();
-      }
-    });
-    // ------------------------------------------------------
+    var alink;
 
 
     var menuList = $('#menuList');
@@ -112,8 +72,53 @@ for (var n = -3; n >= 0; n++) {
     var count = 0;
     var i;
 
+    console.log(alink);
+    // 메뉴 리스트 이동-----------------------------------------
+    var setlist = function () {
+      cleanLi();
+      set_li(bhcdata.length); // 길이만큼 li 생성
+      add_li(); // 맨뒤에있는 li 복사
+      subLi = subUl.find('li'); // li 설정 
+      setUlLiWidth(); //Ul 과 Li길이를 늘림
+      widthSubimg = sub_img.width(); // li 길이 구함
+      shiftleft(); //늘린길이만큼 다시 쉬프트 
+      reLinkConnected(); //이벤트 다시 연결
+    }
 
 
+    // 치킨메뉴를 눌렀을경우 
+    ckMenu.on('click', function (e) {
+      e.preventDefault();
+      // 치킨메뉴랑 같으면 
+      if (bhcdata === data.ck) {
+        // 스탑
+        e.stopPropagation();
+      } else { //치킨메뉴랑 다를경우
+        // 실행
+        bhcdata = data.ck;
+        ckImgLink = '../res/image/chicken/';
+        setlist();
+
+        clikcenvet(0);
+      }
+    });
+
+    // 사이드 메뉴를 눌렀을경우
+    sideMenu.on('click', function (e) {
+      e.preventDefault();
+      if (bhcdata === data.side) {
+        e.stopPropagation();
+      } else {
+        bhcdata = data.side;
+        ckImgLink = '../res/image/side/';
+        setlist();
+        subUl = sub_img.find('ul');
+        subLi = subUl.find('li');
+        alink = subLi.find('a');
+        clikcenvet(0);
+      }
+    });
+    // ------------------------------------------------------
     //객체길이만큼 li 생성----------------------------------
     var set_li = function (count) {
       sub_img.append('<ul></ul>');
@@ -158,15 +163,7 @@ for (var n = -3; n >= 0; n++) {
       subLi.css({
         width: 100 / (ckListLen + 3) + '%'
       });
-    }
-    // li생성
-    set_li(ckListLen);
-    add_li();
-    // 최초의 main 생성
-    clikcenvet(0);
-    // 생성한 Li 를 다시 가져옴
-    subLi = subUl.find('li');
-    setUlLiWidth();
+    }  
 
     function shiftleft() {
       // subimg 의 width 값을 가져옴
@@ -178,8 +175,10 @@ for (var n = -3; n >= 0; n++) {
       // 초기값을 3칸 옆으로 옮긴만큼 설정
       count = 3;
     }
-    shiftleft();
 
+
+    setlist();
+    clikcenvet(0);
     
     // 이벤트에서 permssion으로 중복실행을 제어한다.
     // 다음버튼 이벤트----------------------------------------------
@@ -227,20 +226,25 @@ for (var n = -3; n >= 0; n++) {
     });
 
     // 링크이벤트 --------------------------------------------------
-    // 링크 설정 
-    alink = subUl.find('li').children('a');
-    // 마우스 클릭시 이벤트
-    alink.on('click', function (e) {
-      e.preventDefault();
-      console.log(i);
-      i = $(this).parent().index();
-      if (i === 2) {
-        i = ckListLen + 2
-      } else if (i === 1) {
-        i = ckListLen + 1
-      }
-      clikcenvet(i - 3);
-    });
+    function reLinkConnected (){
+
+      alink = sub_img.find('a');
+      // 마우스 클릭시 이벤트
+      
+      alink.on('click', function (e) {
+        e.preventDefault();
+        console.log(i);
+        i = $(this).parent().index();
+        if (i === 2) {
+          i = ckListLen + 2
+        } else if (i === 1) {
+          i = ckListLen + 1
+        }
+        clikcenvet(i - 3);
+      });
+    
+   
+
 
     // 마우스 올렸을때 이벤트
     alink.on('mouseenter', function (e) {
@@ -276,6 +280,8 @@ for (var n = -3; n >= 0; n++) {
       subLi.eq(i).find('a').removeClass('act');
       // checkfocus(i, false);
     });
+
+  }
 
     // 팝업창 이벤트 -------------------------------------------------
     //display 상태확인
