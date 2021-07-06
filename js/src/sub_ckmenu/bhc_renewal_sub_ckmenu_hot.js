@@ -11,7 +11,7 @@ for (var n = -3; n >= 0; n++) {
     context: document.body
   }).done(function (data) {
 
-    var bhcdata;
+    var bhcdata = data.hot;
     var linkdata;
 
     linkdata = document.location.href.split("#")[1];
@@ -99,18 +99,27 @@ for (var n = -3; n >= 0; n++) {
     // index var
     var count = 0;
     var i;
+
+
     // 서브페이지에있을때 해더에있는 a 값을 눌렀을때 아래 이벤트 재실행 
-    $('.sub_menu').find('a').on('click', function (e) {
-      e.preventDefault();
-      var link = $(this).attr('href');
-      var linka = link.split("#")[1];
-      linkdata = linka;
-      checklinkdata(linkdata);
-      setlist();
-      clikcenvet(0);
-    });
-    // 최초의 한번 실행
-    checklinkdata(linkdata);
+    function setheaderevent() {
+      $('.menuinfo').find('a').on('click', function (e) {
+        if(permission){
+        e.preventDefault();
+        permission = false;
+        var link = $(this).attr('href');
+        var linka = link.split("#")[1];
+        // linkdata = linka;
+        checklinkdata(linka);
+        setlist();
+        clikcenvet(0);
+        console.log('c');
+      }
+      permission = true;
+      });
+    }
+
+
 
     var ckListLen = bhcdata.length;
     // 메뉴 리스트 이동-----------------------------------------
@@ -139,6 +148,7 @@ for (var n = -3; n >= 0; n++) {
         ckImgLink = '../res/image/chicken/';
         setlist();
         clikcenvet(0);
+        setheaderevent();
       }
     });
 
@@ -152,6 +162,7 @@ for (var n = -3; n >= 0; n++) {
         ckImgLink = '../res/image/side/';
         setlist();
         clikcenvet(0);
+        setheaderevent();
       }
     });
 
@@ -165,6 +176,7 @@ for (var n = -3; n >= 0; n++) {
         ckImgLink = '../res/image/beerzone/';
         setlist();
         clikcenvet(0);
+        setheaderevent();
       }
     })
 
@@ -178,9 +190,9 @@ for (var n = -3; n >= 0; n++) {
         ckImgLink = '../res/image/beerzone/';
         setlist();
         clikcenvet(0);
+        setheaderevent();
       }
     });
-
 
 
     //객체길이만큼 li 생성----------------------------------
@@ -239,10 +251,6 @@ for (var n = -3; n >= 0; n++) {
       // 초기값을 3칸 옆으로 옮긴만큼 설정
       count = 3;
     }
-
-
-    setlist();
-    clikcenvet(0);
 
     // 이벤트에서 permssion으로 중복실행을 제어한다.
     // 다음버튼 이벤트----------------------------------------------
@@ -384,8 +392,11 @@ for (var n = -3; n >= 0; n++) {
       e.preventDefault();
       ckStatus();
     });
-
-
+    // 최초의 한번 실행
+    checklinkdata(linkdata);
+    setlist();
+    clikcenvet(0);
+    setheaderevent();
   });
 
 })(jQuery);
