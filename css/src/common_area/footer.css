@@ -7,6 +7,7 @@ footer {
   margin-top: 50px;
 }
 
+
 .company_area {
   position: relative;
   color: var(--color-white);
@@ -23,6 +24,7 @@ footer {
   float: left;
   padding: 10px 20px;
   border-left: 3px solid var(--color-bhc-brown3);
+  font-size: 0.5rem;
 }
 
 .family_site {
