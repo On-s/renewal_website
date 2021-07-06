@@ -1,0 +1,284 @@
+{
+  "ck": [{
+      "Img": "ck1.png",
+      "name": "골드킹",
+      "price": "1000000",
+      "Info": "단짠단짠 맛있는 골드킹",
+      "PopupLink": "http://naver.com"
+    },
+    {
+      "Img": "ck2.png",
+      "name": "뿌링맵소킹",
+      "price": "2000000",
+      "Info": "맛나게 매운 뿌링 맵소킹",
+      "PopupLink": "http://google.com"
+    },
+    {
+      "Img": "ck3.png",
+      "name": "하바네로 포테킹",
+      "price": "3000000",
+      "Info": "난 포테킹은 느끼하더라",
+      "PopupLink": "http://daum.net"
+    },
+    {
+      "Img": "ck4.png",
+      "name": "포테킹 콤보",
+      "price": "4000000",
+      "Info": "포테킹은 내취향아님",
+      "PopupLink": "#"
+    },
+    {
+      "Img": "ck5.png",
+      "name": "뿌링클",
+      "price": "4500000",
+      "Info": "뿌링뿌링 뿌리링클",
+      "PopupLink": "#"
+    },
+    {
+      "Img": "ck6.png",
+      "name": "붐바스틱",
+      "price": "4000000",
+      "Info": "붐바스틱 붐바스틱 예에~",
+      "PopupLink": "#"
+    },
+    {
+      "Img": "ck7.png",
+      "name": "맛초킹 콤보",
+      "price": "4000000",
+      "Info": "매콤짭짤! 밥과 함께 먹기에 딱 좋은 완벽조합",
+      "PopupLink": "#"
+    },
+    {
+      "Img": "ck8.png",
+      "name": "양념 맵소킹",
+      "price": "2000000",
+      "Info": "맵긴함 ",
+      "PopupLink": "#"
+    },
+    {
+      "Img": "ck9.png",
+      "name": "핫 후라이드",
+      "price": "4000000",
+      "Info": "먹고 배아플수있음",
+      "PopupLink": "#"
+    },
+    {
+      "Img": "ck10.png",
+      "name": "펌치킨",
+      "price": "4000000",
+      "Info": "펌핀펌핀",
+      "PopupLink": "#"
+    },
+    {
+      "Img": "ck11.png",
+      "name": "맵스터 순살",
+      "price": "7000000",
+      "Info": "맵~~맵~",
+      "PopupLink": "#"
+    }
+  ],
+
+  "side": [{
+    "Img": "bigcokepop.png",
+    "name": "빅콜팝",
+    "price": "12000",
+    "Info": "큰 콜팝",
+    "PopupLink": " "
+  }, {
+    "Img": "honeyHotteok.png",
+    "name": "꿀호떡",
+    "price": "5000",
+    "Info": "달달한 호떡",
+    "PopupLink": " "
+  }, {
+    "Img": "minicokepop.png",
+    "name": "미니콜팝",
+    "price": "6000",
+    "Info": "작은콜팝",
+    "PopupLink": " "
+  }, {
+    "Img": "ppulingcball.png",
+    "name": "뿌링치즈볼",
+    "price": "1000000",
+    "Info": "뿌우링치이즈보오올",
+    "PopupLink": " "
+  }, {
+    "Img": "ppuling.png",
+    "name": "뿌링감자",
+    "price": "1000000",
+    "Info": "뿌감",
+    "PopupLink": " "
+  }, {
+    "Img": "ppulingchstick.jpg",
+    "name": "뿌링스틱",
+    "price": "1000000",
+    "Info": "쁘으링스틱",
+    "PopupLink": " "
+  }, {
+    "Img": "ppulingcokepop.png",
+    "name": "뿌링 콜팝",
+    "price": "뿌링콜ㄹㄹ팝",
+    "Info": "단짠단짠 맛있는 골드킹",
+    "PopupLink": " "
+  }, {
+    "Img": "ppulingsotteok.png",
+    "name": "뿌링소똑",
+    "price": "1000000",
+    "Info": "뿌링뿌링소스를뿌린 소떡소떡",
+    "PopupLink": " "
+  }, {
+    "Img": "redsotteok.png",
+    "name": "빨간소떡",
+    "price": "1000000",
+    "Info": "매콤달달한 소떢소떡",
+    "PopupLink": " "
+  }, {
+    "Img": "s_kyun.jpg",
+    "name": "감튀",
+    "price": "1000000",
+    "Info": "맛나는 감튀",
+    "PopupLink": " "
+  }, {
+    "Img": "sizechball.jpg",
+    "name": "치즈볼",
+    "price": "1000000",
+    "Info": "찌즈",
+    "PopupLink": " "
+  }],
+
+  "beerzone": [{
+    "Img": "bigShrimp.png",
+    "name": "왕 새우티김",
+    "price": "500",
+    "Info": "큰새우를 튀겻다",
+    "PopupLink": " "
+  }, {
+    "Img": "chdak.png",
+    "name": "치즈 닭",
+    "price": "5000",
+    "Info": "닭에 치즈를 뿌렷당",
+    "PopupLink": " "
+  }, {
+    "Img": "cru.png",
+    "name": "이거뭐야",
+    "price": "6000",
+    "Info": "무슨 메뉴인지 모르겟따",
+    "PopupLink": " "
+  }, {
+    "Img": "dakbokkum.png",
+    "name": "닭 볶음탕",
+    "price": "1000000",
+    "Info": "얼큰한 닭 볶음탕 술안주로 딲",
+    "PopupLink": " "
+  }, {
+    "Img": "dongas.png",
+    "name": "동가스",
+    "price": "1000000",
+    "Info": "ㄷㄳ",
+    "PopupLink": " "
+  }, {
+    "Img": "golbangyee.png",
+    "name": "골뱅이",
+    "price": "1000000",
+    "Info": "골뱅이무침",
+    "PopupLink": " "
+  }, {
+    "Img": "odengtang.png",
+    "name": "오뎅탕",
+    "price": "532532",
+    "Info": "치킨집에 웬 오뎅탕",
+    "PopupLink": " "
+  }, {
+    "Img": "hotdakbal.png",
+    "name": "매운 핫 닭발",
+    "price": "1000000",
+    "Info": "맵다매워 핫핫",
+    "PopupLink": " "
+  }, {
+    "Img": "muckte.png",
+    "name": "먹태",
+    "price": "1000000",
+    "Info": "그냥 술안주",
+    "PopupLink": " "
+  }, {
+    "Img": "nogari.png",
+    "name": "노가리",
+    "price": "1000000",
+    "Info": "노가리노가리노가르시아",
+    "PopupLink": " "
+  }, {
+    "Img": "oddang.png",
+    "name": "오땅",
+    "price": "1000000",
+    "Info": "오징어랑은 뭐다? 땅콩이다.",
+    "PopupLink": " "
+  }],
+
+  "hot": [{
+    "Img": "bigShrimp.png",
+    "name": "왕 새우티김",
+    "price": "500",
+    "Info": "큰새우를 튀겻다",
+    "PopupLink": " "
+  }, {
+    "Img": "chdak.png",
+    "name": "치즈 닭",
+    "price": "5000",
+    "Info": "닭에 치즈를 뿌렷당",
+    "PopupLink": " "
+  }, {
+    "Img": "cru.png",
+    "name": "이거뭐야",
+    "price": "6000",
+    "Info": "무슨 메뉴인지 모르겟따",
+    "PopupLink": " "
+  }, {
+    "Img": "dakbokkum.png",
+    "name": "닭 볶음탕",
+    "price": "1000000",
+    "Info": "얼큰한 닭 볶음탕 술안주로 딲",
+    "PopupLink": " "
+  }, {
+    "Img": "dongas.png",
+    "name": "동가스",
+    "price": "1000000",
+    "Info": "ㄷㄳ",
+    "PopupLink": " "
+  }, {
+    "Img": "golbangyee.png",
+    "name": "골뱅이",
+    "price": "1000000",
+    "Info": "골뱅이무침",
+    "PopupLink": " "
+  }, {
+    "Img": "odengtang.png",
+    "name": "오뎅탕",
+    "price": "532532",
+    "Info": "치킨집에 웬 오뎅탕",
+    "PopupLink": " "
+  }, {
+    "Img": "hotdakbal.png",
+    "name": "매운 핫 닭발",
+    "price": "1000000",
+    "Info": "맵다매워 핫핫",
+    "PopupLink": " "
+  }, {
+    "Img": "muckte.png",
+    "name": "먹태",
+    "price": "1000000",
+    "Info": "그냥 술안주",
+    "PopupLink": " "
+  }, {
+    "Img": "nogari.png",
+    "name": "노가리",
+    "price": "1000000",
+    "Info": "노가리노가리노가르시아",
+    "PopupLink": " "
+  }, {
+    "Img": "oddang.png",
+    "name": "오땅",
+    "price": "1000000",
+    "Info": "오징어랑은 뭐다? 땅콩이다.",
+    "PopupLink": " "
+  }]
+}

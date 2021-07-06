@@ -1,7 +1,7 @@
 
+//youtube 영상 링크 
+
 document.cookie = "SameSite=Lax; Secure";
-
-
 
 var tag = document.createElement('script');
 
@@ -36,3 +36,11 @@ function onPlayerStateChange(event) {
 function stopVideo() {
   player.stopVideo();
 }
+
+
+//jQuery ------------------------------
+// flie name : renewal_main
+//-------------------------------------
+(function($){
+  
+})(jQuery);

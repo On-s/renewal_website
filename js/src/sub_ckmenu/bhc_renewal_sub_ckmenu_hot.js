@@ -7,27 +7,69 @@ for (var n = -3; n >= 0; n++) {
 
 (function ($) {
   $.ajax({
-    url: "../res/data/chicken.json",
+    url: "../res/data/bhcData.json",
     context: document.body
   }).done(function (data) {
 
     var bhcdata;
-    bhcdata = data.ck;
+    var linkdata;
 
+    // 링크 클릭시 상태확인 
+    function baseLocation(ld){
+      if(!linkdata){
+          linkdata = document.location.href.split("#")[1];
+      }else{
+        linkdata = ld.split("#")[1];
+      }
+    switch (linkdata) {
+      case "hotMenu":
+        bhcdata = data.hot;
+        ckImgLink = '../res/image/beerzone/';
+        break;
+      case "ckMenu":
+        bhcdata = data.ck;
+        ckImgLink = '../res/image/chicken/';
+        break;
+      case "sideMenu":
+        bhcdata = data.side;
+        ckImgLink = '../res/image/side/';
+        break;
+      case "beerMenu":
+        bhcdata = data.beerzone;
+        ckImgLink = '../res/image/beerzone/';
+        break;
+      default:
+        bhcdata = data.hot;
+        ckImgLink = '../res/image/beerzone/';
+        break;
+    }
+    console.log(ld);
+  }
+  baseLocation();
+
+    $('.sub_menu').find('a').on('click', function(e){
+      e.preventDefault();
+      var ld = $(this).attr('href');
+      location.reload();
+      baseLocation(ld);
+      console.log(ld);
+  });
+    
+  
     // 중복실행 제어 하기위한 퍼미션값 = true
     var permission = true;
 
     var menu_part = $('.menu_part');
-
-    var hotMenu = menu_part.find('.hotMenu');
-    var ckMenu = menu_part.find('.ckMenu');
-    var sideMenu = menu_part.find('.sideMenu');
-    var beerMenu = menu_part.find('.beerMenu');
-    var alink;
-
-
     var menuList = $('#menuList');
     var list_box = menuList.find('.list_box');
+
+    var hotMenu = list_box.find('.hotMenu');
+    var ckMenu = list_box.find('.ckMenu');
+    var sideMenu = list_box.find('.sideMenu');
+    var beerMenu = list_box.find('.beerMenu');
+
+    var alink;
+
 
     var menuCk = menu_part.find('#menuCk');
 
@@ -63,7 +105,7 @@ for (var n = -3; n >= 0; n++) {
     var btn_next = menuCk.find('.next');
     var btn_pre = menuCk.find('.previous');
     //이미지 링크
-    var ckImgLink = '../res/image/chicken/';
+    var ckImgLink;
 
     // 데이터 길이
     var ckListLen = bhcdata.length;
@@ -72,7 +114,7 @@ for (var n = -3; n >= 0; n++) {
     var count = 0;
     var i;
 
-    console.log(alink);
+
     // 메뉴 리스트 이동-----------------------------------------
     var setlist = function () {
       cleanLi();
@@ -98,7 +140,6 @@ for (var n = -3; n >= 0; n++) {
         bhcdata = data.ck;
         ckImgLink = '../res/image/chicken/';
         setlist();
-
         clikcenvet(0);
       }
     });
@@ -112,13 +153,38 @@ for (var n = -3; n >= 0; n++) {
         bhcdata = data.side;
         ckImgLink = '../res/image/side/';
         setlist();
-        subUl = sub_img.find('ul');
-        subLi = subUl.find('li');
-        alink = subLi.find('a');
         clikcenvet(0);
       }
     });
-    // ------------------------------------------------------
+
+    // 비어존 메뉴를 눌렀을 경우
+    beerMenu.on('click', function (e) {
+      e.preventDefault();
+      if (bhcdata === data.beerzone) {
+        e.stopPropagation();
+      } else {
+        bhcdata = data.beerzone;
+        ckImgLink = '../res/image/beerzone/';
+        setlist();
+        clikcenvet(0);
+      }
+    })
+
+    // 핫 & 뉴 메뉴를 눌렀을경우 
+    hotMenu.on('click', function (e) {
+      e.preventDefault();
+      if (bhcdata === data.beerzone) {
+        e.stopPropagation();
+      } else {
+        bhcdata = data.beerzone;
+        ckImgLink = '../res/image/beerzone/';
+        setlist();
+        clikcenvet(0);
+      }
+    });
+
+
+
     //객체길이만큼 li 생성----------------------------------
     var set_li = function (count) {
       sub_img.append('<ul></ul>');
@@ -133,8 +199,8 @@ for (var n = -3; n >= 0; n++) {
         });
       };
 
-    } //----------------------------------------------------
-    // 마지막 li 요소를 첫번째 li 이전에 삽입
+    }
+    // 마지막 li 요소를 첫번째 li 이전에 삽입------------
     var add_li = function () {
       var copyLi = subLi.eq(-4).nextAll().clone();
       subLi.first().before(copyLi);
@@ -163,7 +229,7 @@ for (var n = -3; n >= 0; n++) {
       subLi.css({
         width: 100 / (ckListLen + 3) + '%'
       });
-    }  
+    }
 
     function shiftleft() {
       // subimg 의 width 값을 가져옴
@@ -179,7 +245,7 @@ for (var n = -3; n >= 0; n++) {
 
     setlist();
     clikcenvet(0);
-    
+
     // 이벤트에서 permssion으로 중복실행을 제어한다.
     // 다음버튼 이벤트----------------------------------------------
     btn_next.on('click', function (e) {
@@ -226,11 +292,11 @@ for (var n = -3; n >= 0; n++) {
     });
 
     // 링크이벤트 --------------------------------------------------
-    function reLinkConnected (){
+    function reLinkConnected() {
 
       alink = sub_img.find('a');
       // 마우스 클릭시 이벤트
-      
+
       alink.on('click', function (e) {
         e.preventDefault();
         console.log(i);
@@ -242,46 +308,45 @@ for (var n = -3; n >= 0; n++) {
         }
         clikcenvet(i - 3);
       });
-    
-   
 
 
-    // 마우스 올렸을때 이벤트
-    alink.on('mouseenter', function (e) {
-      e.preventDefault();
-      i = $(this).parent().index();
-      subLi.eq(i).find('a').addClass('menter');
-      // checkmouse(i);
-    });
 
 
-    // 마우스 내렸을때 이벤트
-    alink.on('mouseleave', function (e) {
-      e.preventDefault();
-      i = $(this).parent().index();
-      subLi.eq(i).find('a').removeClass('menter');
-      // checkmouse(i, false);
-    });
+      // mouse 올렸을때/내렸을때 class 추가 제거
+      var checkmouse = function (i, ck) {
+        if (ck) {
+          subLi.eq(i).find('a').addClass('menter');
+        } else {
+          subLi.eq(i).find('a').removeClass('menter');
+        }
+      }
+      // 포커스 했을때 나갔을때
+      var checkfocus = function (i, ck) {
+        if (ck) {
+          subLi.eq(i).find('a').addClass('act');
+        } else {
+          subLi.eq(i).find('a').removeClass('act');
+        }
+      }
+
+      alink.on('mouseenter', function (e) {
+        i = $(this).parent().index();
+        checkmouse(i, true);
+      }).on('mouseleave', function (e) {
+        i = $(this).parent().index();
+        checkmouse(i, false);
+      });
 
 
-    // 포커스 했을때 이벤트
-    alink.on('focus', function (e) {
-      e.preventDefault();
-      i = $(this).parent().index();
-      subLi.eq(i).find('a').addClass('act');
-      // checkfocus(i);
-    });
+      alink.on('focus', function (e) {
+        i = $(this).parent().index();
+        checkmouse(i, true)
+      }).on('focusout', function (e) {
+        i = $(this).parent().index();
+        checkmouse(i, false)
+      });
 
-
-    // 포커스 나갔을때 이벤트
-    alink.on('focusout', function (e) {
-      e.preventDefault();
-      i = $(this).parent().index();
-      subLi.eq(i).find('a').removeClass('act');
-      // checkfocus(i, false);
-    });
-
-  }
+    }
 
     // 팝업창 이벤트 -------------------------------------------------
     //display 상태확인
@@ -325,5 +390,7 @@ for (var n = -3; n >= 0; n++) {
       ckStatus();
     });
 
+  
   });
+
 })(jQuery);
