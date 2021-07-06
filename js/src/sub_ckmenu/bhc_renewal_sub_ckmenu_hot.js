@@ -14,48 +14,34 @@ for (var n = -3; n >= 0; n++) {
     var bhcdata;
     var linkdata;
 
-    // 링크 클릭시 상태확인 
-    function baseLocation(ld){
-      if(!linkdata){
-          linkdata = document.location.href.split("#")[1];
-      }else{
-        linkdata = ld.split("#")[1];
+    linkdata = document.location.href.split("#")[1];
+    //  처음 시작할때 주소값에 따른 data set
+    function checklinkdata(linkdata) {
+      switch (linkdata) {
+        case "hotMenu":
+          bhcdata = data.hot;
+          ckImgLink = '../res/image/beerzone/';
+          break;
+        case "ckMenu":
+          bhcdata = data.ck;
+          ckImgLink = '../res/image/chicken/';
+          break;
+        case "sideMenu":
+          bhcdata = data.side;
+          ckImgLink = '../res/image/side/';
+          break;
+        case "beerMenu":
+          bhcdata = data.beerzone;
+          ckImgLink = '../res/image/beerzone/';
+          break;
+        default:
+          bhcdata = data.hot;
+          ckImgLink = '../res/image/beerzone/';
+          break;
       }
-    switch (linkdata) {
-      case "hotMenu":
-        bhcdata = data.hot;
-        ckImgLink = '../res/image/beerzone/';
-        break;
-      case "ckMenu":
-        bhcdata = data.ck;
-        ckImgLink = '../res/image/chicken/';
-        break;
-      case "sideMenu":
-        bhcdata = data.side;
-        ckImgLink = '../res/image/side/';
-        break;
-      case "beerMenu":
-        bhcdata = data.beerzone;
-        ckImgLink = '../res/image/beerzone/';
-        break;
-      default:
-        bhcdata = data.hot;
-        ckImgLink = '../res/image/beerzone/';
-        break;
     }
-    console.log(ld);
-  }
-  baseLocation();
 
-    $('.sub_menu').find('a').on('click', function(e){
-      e.preventDefault();
-      var ld = $(this).attr('href');
-      location.reload();
-      baseLocation(ld);
-      console.log(ld);
-  });
-    
-  
+
     // 중복실행 제어 하기위한 퍼미션값 = true
     var permission = true;
 
@@ -63,6 +49,7 @@ for (var n = -3; n >= 0; n++) {
     var menuList = $('#menuList');
     var list_box = menuList.find('.list_box');
 
+    // 리스트박스안에있는 링크 
     var hotMenu = list_box.find('.hotMenu');
     var ckMenu = list_box.find('.ckMenu');
     var sideMenu = list_box.find('.sideMenu');
@@ -84,7 +71,7 @@ for (var n = -3; n >= 0; n++) {
     // 상품 링크 구역
     var minImg = main_img.find('.img').find('a');
 
-
+    // 서브이미지 Ul/Li/가로값
     var sub_img = menu_part.find('.sub_img');
     var subUl;
     var subLi;
@@ -108,13 +95,24 @@ for (var n = -3; n >= 0; n++) {
     var ckImgLink;
 
     // 데이터 길이
-    var ckListLen = bhcdata.length;
 
     // index var
     var count = 0;
     var i;
+    // 서브페이지에있을때 해더에있는 a 값을 눌렀을때 아래 이벤트 재실행 
+    $('.sub_menu').find('a').on('click', function (e) {
+      e.preventDefault();
+      var link = $(this).attr('href');
+      var linka = link.split("#")[1];
+      linkdata = linka;
+      checklinkdata(linkdata);
+      setlist();
+      clikcenvet(0);
+    });
+    // 최초의 한번 실행
+    checklinkdata(linkdata);
 
-
+    var ckListLen = bhcdata.length;
     // 메뉴 리스트 이동-----------------------------------------
     var setlist = function () {
       cleanLi();
@@ -309,9 +307,6 @@ for (var n = -3; n >= 0; n++) {
         clikcenvet(i - 3);
       });
 
-
-
-
       // mouse 올렸을때/내렸을때 class 추가 제거
       var checkmouse = function (i, ck) {
         if (ck) {
@@ -320,7 +315,7 @@ for (var n = -3; n >= 0; n++) {
           subLi.eq(i).find('a').removeClass('menter');
         }
       }
-      // 포커스 했을때 나갔을때
+      // 포커스 했을때/나갔을때
       var checkfocus = function (i, ck) {
         if (ck) {
           subLi.eq(i).find('a').addClass('act');
@@ -328,7 +323,7 @@ for (var n = -3; n >= 0; n++) {
           subLi.eq(i).find('a').removeClass('act');
         }
       }
-
+      // 마우스 올랬을떄 내렸을떄
       alink.on('mouseenter', function (e) {
         i = $(this).parent().index();
         checkmouse(i, true);
@@ -340,10 +335,10 @@ for (var n = -3; n >= 0; n++) {
 
       alink.on('focus', function (e) {
         i = $(this).parent().index();
-        checkmouse(i, true)
+        checkfocus(i, true)
       }).on('focusout', function (e) {
         i = $(this).parent().index();
-        checkmouse(i, false)
+        checkfocus(i, false)
       });
 
     }
@@ -390,7 +385,7 @@ for (var n = -3; n >= 0; n++) {
       ckStatus();
     });
 
-  
+
   });
 
 })(jQuery);
