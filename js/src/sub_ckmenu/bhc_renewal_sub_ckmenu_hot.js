@@ -109,7 +109,6 @@ for (var n = -3; n >= 0; n++) {
         permission = false;
         var link = $(this).attr('href');
         var linka = link.split("#")[1];
-        // linkdata = linka;
         checklinkdata(linka);
         setlist();
         clikcenvet(0);
@@ -122,6 +121,7 @@ for (var n = -3; n >= 0; n++) {
 
 
     var ckListLen = bhcdata.length;
+
     // 메뉴 리스트 이동-----------------------------------------
     var setlist = function () {
       cleanLi();
