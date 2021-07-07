@@ -13,8 +13,8 @@
     var adBox = wrap.find('#adBox');
     var ad_area = adBox.find('.ad_area');
 
-    var ad_btn_before = ad_area.find('.ad_btn_before');
-    var ad_btn_next = ad_area.find('.ad_btn_next');
+    var ad_btn_before = ad_area.find('.ad_btn_before').find('a');
+    var ad_btn_next = ad_area.find('.ad_btn_next').find('a');
 
     var adUl = ad_area.find('.adUl');
     var adLi;
@@ -26,9 +26,10 @@
     var indiUl = indicator.find('ul');
     var indiLi;
     var indiLink;
-
     var n = 0;
-    var timed = 500;
+    var timed = 800;
+
+    var permission = true;
 
     console.log(adLen);
 
@@ -52,6 +53,8 @@
         });
       };
     };
+
+
     // Ul 및 li 길이 변경
     var setUlLiWidth = function () {
       adUl.css({
@@ -83,6 +86,52 @@
 
     setAD();
     set_indicator(adLen);
+
+    // 버튼 이벤트 부분
+    // 이전버튼 부분
+    ad_btn_before.on('click', function (e) {
+      e.preventDefault();
+      if (permission) {
+        permission = false;
+        n--;
+        adUl.animate({
+          marginLeft: (-100 * n) + '%'
+        },500, function () {
+          if (n <= -1) {
+            adUl.css({
+              marginLeft: (-100 * (adLen - 1)) + '%'
+            });
+            n = adLen - 1;
+          }
+          permission = true;
+        });
+        indiLi.eq(n).addClass('act');
+        indiLi.eq(n).siblings().removeClass('act');
+      }
+    });
+    // 다음 버튼 부분
+    ad_btn_next.on('click', function (e) {
+      e.preventDefault();
+      if (permission) {
+        permission = false;
+        if (n >= 4) {
+          adUl.css({
+            marginLeft: 100 + '%'
+          });
+          n = -1;
+        }
+        n++;
+        adUl.animate({
+          marginLeft: (-100 * n) + '%'
+        },500, function () {
+          permission = true;
+        });
+      }
+      indiLi.eq(n).addClass('act');
+      indiLi.eq(n).siblings().removeClass('act');
+    });
+
+
 
 
     // indicator 이벤트 부분
