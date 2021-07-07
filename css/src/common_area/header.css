@@ -28,7 +28,7 @@ header {
     h1{
         float: left;
     }
-    h1 a {
+    h1 a {  
         float: left;
         width: 80px; height: 50px;
         background-image: url("../../../res/icon/logo.png");
@@ -49,7 +49,7 @@ header {
         margin-right: 0.725rem;
         color: var(--color-bhc-font1);
         font-family: 'Malgun Gothic';
-        font-size: var(--font-size2-);
+        font-size: var(--font-size1-);
     }
     .main_menu > li:nth-child(1)  {
         margin-left: 20px;
@@ -76,7 +76,7 @@ header {
         color : var(--color-white);
         text-align: center;
         font-family: 'Malgun Gothic';
-        font-size: var(--font-size2-);
+        font-size: var(--font-size1-);
     }
  
     .sub-menu > li >  a:hover {
@@ -228,7 +228,7 @@ header {
 
             header {
                 width: 100%;
-                height: 100px;
+                height: 80px;
             }
           
             #headBox {
@@ -277,7 +277,7 @@ header {
 
             header {
                 width: 100%;
-                height: 100px;
+                height: 80px;
             }
           
             #headBox {
@@ -323,7 +323,7 @@ header {
 
       header {
           width: 100%;
-          height: 100px;
+          height: 80px;
       }
       h1 > a {
         width: 180px;

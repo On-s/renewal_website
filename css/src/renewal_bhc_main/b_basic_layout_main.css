@@ -23,7 +23,7 @@
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
-    3px 3px 5px rgba(0, 0, 0, 0.1);; 
+    3px 3px 5px rgba(0, 0, 0, 0.1); 
   }
 
   .ad_area>.adUl{
@@ -35,7 +35,7 @@
     float: left;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 10px 20px;
     box-sizing: border-box;
   }
 
@@ -49,7 +49,7 @@
     text-align: center;
 }
   .ad_btn_before a, .ad_btn_next a{
-    width: 30px; height: 50px;
+    width: 30px; height: 30px;
     position: absolute;
     background-repeat: no-repeat;
       background-size: 100% auto;
@@ -69,7 +69,7 @@
   /* .indicator  */
   .indicator {
     position: absolute;
-    left:0; right:0; bottom:0;
+    left:0; right:0; bottom:0.5rem;
     text-align: center;
     width:100%; height:auto;
     margin:auto;
@@ -80,26 +80,29 @@
     /* text-align: center; */
     width:auto; height:auto;
     padding:0.3rem;
-    border-radius:3rem;
-    background-color: rgba(255, 255, 255, 0.2);
   }
   .indicator li{
     display:inline-block;
     width:2rem; height:2rem;
-    margin-right:1rem;
+    margin-right:2rem;
     transition: all 200ms ease;
   }
   .indicator li:last-child {  margin-right: 0;}
   .indicator li a{
     display: block;
     width: 100%; height: 100%;
-    background-color: #fff;
+    background-color: var(--color-bhc-white);
     border-radius: 2rem;
     box-sizing: border-box;
+    box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
+    3px 3px 3px rgba(0, 0, 0, 0.5);
   }
   
-  .indicator li.act  { width:4rem;}
-  .indicator li.act a{ background-color: #ff0;}
+  .indicator li.act  { width:2rem;}
+  .indicator li.act a{ background-color: var(--color-bhc-yellow);
+    box-shadow:1px 1px 3px rgba(255, 255, 255, 0.8),
+    -2px -2px 3px rgba(0, 0, 0, 0.8);
+  transition: all 300ms linear; }
   .indicator a:hover { box-shadow: 0.2rem 0.2rem 0.2rem #171717;}
   .indicator a:focus {outline:0; border: 0.2rem solid #171717; }
 

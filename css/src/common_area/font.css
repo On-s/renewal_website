@@ -1,6 +1,7 @@
 /* @font */
 
 :root{
+    --font-size0-     : 12px;
     --font-size1-     : 16px;
     --font-size2-     : 18px;
     --font-size3-     : 22px;

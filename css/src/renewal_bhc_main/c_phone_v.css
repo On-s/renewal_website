@@ -8,8 +8,8 @@
   /* adBox ----------------------------------------- */
   #adBox {
     width: 100%;
-    height: 400px; 
-    height: 111.111111vw;
+    height: 300px; 
+    height: 83.33333vw;
     padding-top: 50px;
     padding-top: 13.88889vw;
     margin-top: 30px;
@@ -19,23 +19,14 @@
         height: 400px;
         height: 111.111111vw;
     }
-    .ad_btn_before{
-        width: 20px;
-        height: 100px;
-        height: 27.777778vw;
-    }
-    .ad_btn_next {
-        width: 20px;
-        height: 100px;
-        height: 27.777778vw;
-    }
+
  
   /* ckmenuBox ----------------------------------------- */
   #ckmenuBox {
     width: 80%;
     height: 400px; 
     height: 111.111111vw;
-    margin-top: 50px;
+    margin-top: 150px;
     padding: 20px 0;
     padding: 5.55556vw 0;
   }
