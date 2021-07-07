@@ -182,6 +182,6 @@
       'mouseleave': slideGoFn
     });
 
-
+    
   });
 })(jQuery);
