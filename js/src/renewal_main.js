@@ -18,7 +18,7 @@
 
     var adUl = ad_area.find('.adUl');
     var adLi;
-    var adImgLink = 0;
+    var adImgLink = '../res/image/';
 
     var adLen = adData.length;
 

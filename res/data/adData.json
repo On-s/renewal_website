@@ -1,16 +1,26 @@
 {
     "ad" : [{
-        "Img" : "",
-        "adInfo" : "0",
+        "Img" : "img_main_banner_210415_01.jpg",
+        "adInfo" : "펌펌펌치킨",
         "adLink" : ""
     },{
-        "Img" : "",
+        "Img" : "img_main_banner_210527_01.jpg",
         "adInfo" : "1",
+        "adLink" : "포테킹 후라이드 X 하바네로가 만났다 ! 하바네로 포테킹 후라이드! 포테킹을 더욱 맛있게 즐기는 하바네로 레시피!"
+    },
+    {
+        "Img" : "img_main_banner_210415_02.jpg",
+        "adInfo" : "빠텐더",
         "adLink" : ""
     },
     {
-        "Img" : "",
-        "adInfo" : "2",
+        "Img" : "img_main_banner_200716.jpg",
+        "adInfo" : "골드킹시리즈",
+        "adLink" : ""
+    },
+    {
+        "Img" : "img_main_banner_200228.jpg",
+        "adInfo" : "콤보 시리즈",
         "adLink" : ""
     }]
 }
