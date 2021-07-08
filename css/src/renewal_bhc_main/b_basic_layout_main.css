@@ -111,31 +111,8 @@
   width: 80%;
   margin: auto;
   height: 300px;
-  margin-top: 50px;
   box-sizing: border-box;
 }
-
-.order_area{
-    width: 90%;
-    margin: auto;
-    box-sizing: border-box;
-  } 
-  .phone_order, .search_store {
-    background-color: var(--color-bhc-brown2);
-    color: var(--color-bhc-white);
-    border-radius: 0 5px 0 5px;
-    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
-    3px 3px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: 'BM HANNA Pro';
-    font-size: var(--font-size3-);
-  }
-    .phone_order {
-      float: left;
-    }
-    .search_store {
-      float: right;
-    }
 
   #ckmenu_area {
     position: relative;
@@ -252,7 +229,7 @@
 }
 
 #noticeBox > ul > li:hover{
-  top : -20%
+  top : -15%
 }
 
 
@@ -294,9 +271,9 @@
 #sns_area {
   position: relative;
   width: 80%;
-  height: 300px;
+  height: auto;
   margin: auto;
-  margin-top: 150px;
+  margin-top: -100px;
 }
 
 #snsBox{

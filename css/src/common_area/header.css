@@ -92,9 +92,13 @@ header {
     }
     .searchBox {
       float: right;
-      width: 40px;
-      height: 40px;
+      width: auto;
+      height: auto;
       margin-right: 30px;
+    }
+    .searchBox button{
+      width: 30px;
+      height: 40px;
       background-image: url("../../../res/icon/SVG/search2.svg");
       background-repeat: no-repeat;
       background-size: contain;
@@ -112,7 +116,6 @@ header {
       width: 40px;
       height: 40px;
       transform: scale(1.5);
-      margin-top: 8px;
       background-image: url("../../../res/icon/SVG/userlock.svg");
       background-repeat: no-repeat;
       background-size: contain;
@@ -306,6 +309,7 @@ header {
             .searchBox {
               width: 50px;
               height: 50px;
+              margin-top: -5px;
             }
             .userBox {
               width: 50px;
@@ -354,7 +358,9 @@ header {
       }
     
       .searchBox {
-        float: right;
+        margin-top: -5px;
+      }
+      .searchBox button {
         width: 50px;
         height: 50px;
       }
