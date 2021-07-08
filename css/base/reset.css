@@ -63,10 +63,3 @@ input ,textarea , select { cursor: pointer; box-sizing:border-box; background-co
 
 
 hr {border-bottom: 1px solid #333;}
-
-input[type="text"],
-input[type="password"],
-input[type="url"],
-input[type="email"],
-input[type="search"],
-input[type="tel"]{ border-radius:0; appearance:none;}
