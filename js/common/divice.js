@@ -14,8 +14,6 @@
 var deviceSize = function () {
 
     var resultDevice;
-    var url = '../js/src/';
-    var filename = ['bhc_main/','sub_ckmenu/','sub_stroe','sub_aboutbhc']
 
 
     //jQuery ------------------------------
@@ -68,10 +66,6 @@ var deviceSize = function () {
         var winSize = deviceCheck(beforeWinW);
         resultDevice = winSize;
 
-        // resultDevice 를가지고 연결
-        // if (resultDevice <= deviceType.tablet) {
-            
-        // }
         // ------------------------------------------------------------------
         $(window).on('resize', function () {
             // 사이즈변경시 브라우저 크기값 재 확인
@@ -89,6 +83,24 @@ var deviceSize = function () {
     return resultDevice;
 };
 
+var url = '../js/src/';
+var filename = ['bhc_main/','sub_ckmenu/','sub_stroe','sub_aboutbhc'];
+var nowDevice = deviceSize();
+
+console.log(nowDevice);
+var deviceType = ['smartphone', 'table', 'laptop', 'pc', 'pcfull'];
+
+function importJS(filePath) {
+  // append.("<script src='"+ url + filePath + "link_adress'></script>")
+}
+
+// function checkdeviceType() {
+//     if (nowDevice === deviceType[1] ) {
+      
+//     } else {
+      
+//     }
+// }
 
 
 //  연결 느낌 
