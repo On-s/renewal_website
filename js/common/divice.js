@@ -6,14 +6,17 @@
 /* g_pc 1600 ~ */
 
 
-/** 
- * 1. 브라우저의 가로 크기값 확인
- * 2. 내가 원하는 기준치로 설정된 범위(이름을 설정해서 처리)에 맞는지 파악(mobile, tablet, laptop, pc ...)
- * 3. 브라우저의 크기가 변경될때('resize') 기존 가로값과 변경된 가로값을 비교하여, 일치하지 않을경우에 일부 재처리
+/*
+  1. 브라우저의 가로 크기값 확인
+  2. 내가 원하는 기준치로 설정된 범위(이름을 설정해서 처리)에 맞는지 파악(mobile, tablet, laptop, pc ...)
+  3. 브라우저의 크기가 변경될때('resize') 기존 가로값과 변경된 가로값을 비교하여, 일치하지 않을경우에 일부 재처리
  */
 var deviceSize = function () {
 
     var resultDevice;
+    var url = '../js/src/';
+    var filename = ['bhc_main/','sub_ckmenu/','sub_stroe','sub_aboutbhc']
+
 
     //jQuery ------------------------------
     // flie name : divice
@@ -21,13 +24,13 @@ var deviceSize = function () {
     (function ($) {
 
         // 기준치를 설정
-        // [ 480, 1024, 1440, 1920];
+        // [ 480, 768, 1280, 1600];
         var deviceType = [{
                 type: 'smartphone',
                 size: 480
             },
             {
-                type: 'table',
+                type: 'tablet',
                 size: 768
             },
             {
@@ -44,14 +47,13 @@ var deviceSize = function () {
         ];
 
         // 브라우저 최초크기값 확인
-        var win = $(window);
-        var beforeWinW = win.outerWidth(true);
+        var beforeWinW = $(window).outerWidth(true);
 
         var deviceCheck = function (winW) {
             // type 체크
             var myType;
             // 어느기준치에 걸리는지를 체크한다.
-            for (var i = 0; i < deviceType.length; i ++) {
+            for (var i = 0; i < deviceType.length; i++) {
                 if (winW <= deviceType[i].size) {
                     myType = deviceType[i].type;
                     break;
@@ -65,22 +67,29 @@ var deviceSize = function () {
 
         var winSize = deviceCheck(beforeWinW);
         resultDevice = winSize;
+
+        // resultDevice 를가지고 연결
+        // if (resultDevice <= deviceType.tablet) {
+            
+        // }
         // ------------------------------------------------------------------
-        win.on('resize', function () {
+        $(window).on('resize', function () {
             // 사이즈변경시 브라우저 크기값 재 확인
-            var reWinW = win.outerWidth(true);
+            var reWinW = $(window).outerWidth(true);
             var afterWinSize = deviceCheck(reWinW);
 
             // 기존 디바이스타입과 변경된 디바이스타입이 다른경우 새로고침
             if (winSize !== afterWinSize) {
                 location.reload();
+                console.log(afterWinSize);
             }
-
         });
         return resultDevice;
     })(jQuery);
     return resultDevice;
 };
+
+
 
 //  연결 느낌 
 
