@@ -1,6 +1,6 @@
 //youtube 영상 링크 
 
-// ??
+// 서버를 구동하지않으면 확인할 수 가 없다.
 document.cookie = 'same-site-cookie=foo; SameSite=Lax';
 document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
 
