@@ -1,6 +1,19 @@
 //jQuery ------------------------------
 // flie name : renewal_main
 //-------------------------------------
+jQuery.event.special.touchstart = {
+  setup: function (_, ns, handle) {
+    if (ns.includes("noPreventDefault")) {
+      this.addEventListener("touchstart", handle, {
+        passive: false
+      });
+    } else {
+      this.addEventListener("touchstart", handle, {
+        passive: true
+      });
+    }
+  }
+};
 (function ($) {
   $.ajax({
     url: "../res/data/adData.json",
@@ -96,7 +109,7 @@
         n--;
         adUl.animate({
           marginLeft: (-100 * n) + '%'
-        },500, function () {
+        }, 500, function () {
           if (n <= -1) {
             adUl.css({
               marginLeft: (-100 * (adLen - 1)) + '%'
@@ -123,7 +136,7 @@
         n++;
         adUl.animate({
           marginLeft: (-100 * n) + '%'
-        },500, function () {
+        }, 500, function () {
           permission = true;
         });
       }
@@ -182,6 +195,6 @@
       'mouseleave': slideGoFn
     });
 
-    
+
   });
 })(jQuery);

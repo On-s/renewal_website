@@ -1,8 +1,6 @@
 //jQuery ------------------------------
 // flie name : header
 //-------------------------------------
-(function ($) {
-
     var search_btn = $('.search_btn');
 
 
@@ -32,6 +30,3 @@
         console.log('click search');
         ckStatus(searchbar);
     });
-
-
-})(jQuery);
