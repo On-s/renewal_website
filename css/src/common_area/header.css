@@ -146,6 +146,82 @@ abbr {
   background-position: 0 0;
 }
 
+
+
+.user_con {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+
+.user_bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.user_close {
+  position: absolute;
+  display: block;
+  border: 1px solid #f1f1f1;
+  color: #444;
+  font-size: 1.25rem;
+  top: 10px;
+  right: 10px;
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
+      3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.user_logo {
+  width: 30%;
+  height: 30%;
+  margin: auto;
+  transform: translateX(5%);
+  background-image: url('../../../res/icon/logo2.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.user_input_box {
+  position: relative;
+  width: 80%; height: auto;
+  background-color: #555;
+  margin: auto;
+  margin-top: 100px;
+}
+.id,.pw {
+  position: relative;
+  left: 50%; transform: translateX(-50%);
+  width: 50%; height: 50px;
+  background-color: #fff;
+  border: 1px solid #555;
+}
+.login_btn {
+  position: absolute;
+  right: 5%; top: 50%; 
+  transform: translateY(-50%);
+  width: 20%; height: 3rem;
+  background-color: #aaa;
+}
+
+.user_btn_box {
+  width: 80%; height: auto;
+  background-color: #ddd;
+  margin: auto;
+}
+
 /* ~479px ------------------------------------------------------------- */
 @media screen and (max-width:479px) {
   header {
