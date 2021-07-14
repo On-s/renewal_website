@@ -1,39 +1,111 @@
+.fontup0 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--color-bhc-brown3 );
+}
+.fontup {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* ceo 인사말 */
 #ceoGreetings {
     width: 100%;
     height: 400px;
-    background-color: #243;
+    background-color: var(--color-bhc-brown3);
     margin-top: 150px;
     padding-top: 80px; box-sizing: border-box;
 }
 
 .ceog_box{
+    position: relative;
     max-width: 1280px;
     width: 80%;
     height: 380px;
+    padding: 20px; box-sizing: border-box;
+    text-align: center;
     margin: auto;
-    background-color: #552;
+    background-color:#fff;
+    border-radius: 0 0 2rem 2rem;
+}
+.ceog_box div:last-child {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.ceog_box .icon {
+    position: absolute;
+    left: 36%; top: 0;
+    width: 100%; height: 100%;
+    background-image: url('../../../res/icon/fort-awesome-alt-brands.svg');
+    background-repeat: no-repeat;
+    margin: auto;
+    opacity: 0.1;
 }
 
 
 
+/* 브랜드스토리 */
 #brandStroy {
     width: 90%;
     max-width: 1440px;
     height: 500px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     background-color: #f32;
 }
 
+.bhc_bl {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #fff;
+    padding: 50px 30px; box-sizing: border-box;
+    line-height: 1.8rem;
+}
+
+.bhc_bl_img {
+    float: right;
+    width: 80%;
+    height: 100%;
+    background-image: url('../../../res/image/bi_img_190510.png');
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    padding: 20px 50px; box-sizing: border-box;
+}
+.bhc_bl_img p{
+    float: right;
+    margin-right: 100px;
+}
+.bhc_bl_img p {
+    margin-bottom: 20%;
+}
+.store_concept {
+    float: right;
+    width: 20%;
+    height: 100%;
+}
+.store_concept img {
+    width: 100%;
+    height: 50%;
+}
+
+
+/* bhc만의 경쟁력 */
 #competitiveness {
     width: 80%;
     max-width: 1280px;
     height: 250px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 150px;
     background-color: #666;
 }
 
+/* 채용문의 */
 #recruitment {
     width: 80%;
     max-width: 1280px;
@@ -48,6 +120,7 @@
     width: 140px; height: auto; min-height: 300px;
     margin-left: 750px;
     background-color: #aaa;
+    border-radius: 2rem;
 }
 
 .sideBox {

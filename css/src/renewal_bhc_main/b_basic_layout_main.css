@@ -1,12 +1,11 @@
-
-.wrap { 
-    position: relative;
-    width: 100%;
-    min-width: 360px;
-    height: auto;
-    min-height: 1000px;
-    background-color: var(--color-bhc-white);
-    overflow: hidden;
+.wrap {
+  position: relative;
+  width: 100%;
+  min-width: 360px;
+  height: auto;
+  min-height: 1000px;
+  background-color: var(--color-bhc-white);
+  overflow: hidden;
 }
 
 
@@ -16,95 +15,123 @@
   position: relative;
   width: 100%;
 
-  }
-  .ad_area{
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
-    3px 3px 5px rgba(0, 0, 0, 0.1); 
-  }
-
-  .ad_area>.adUl{
-    width: 100%;
-    height: 100%;
-  }
-
-  .ad_area>.adUl li {
-    float: left;
-    width: 100%;
-    height: 100%;
-    padding: 10px 20px;
-    box-sizing: border-box;
-  }
-
-  .adUl li  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    text-align: center;
 }
-  .ad_btn_before a, .ad_btn_next a{
-    width: 30px; height: 30px;
-    position: absolute;
-    background-repeat: no-repeat;
-      background-size: 100% auto;
-      background-position: 0 0;
-      margin-top: 33.333333%;
-  }
 
-  .ad_btn_before a{
-      top: 0; left: 5%;
-      background-image: url("../../../res/icon/SVG/left.svg");
-  }
-  .ad_btn_next a{
-      top: 0; right: 5%;
-      background-image: url("../../../res/icon/SVG/right.svg");
-  }
+.ad_area {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+}
 
-  /* .indicator  */
-  .indicator {
-    position: absolute;
-    left:0; right:0; bottom:0.5rem;
-    text-align: center;
-    width:100%; height:auto;
-    margin:auto;
-  }
-  
-  .indicator {
-    display: inline-block;
-    /* text-align: center; */
-    width:auto; height:auto;
-    padding:0.3rem;
-  }
-  .indicator li{
-    display:inline-block;
-    width:2rem; height:2rem;
-    margin-right:2rem;
-    transition: all 200ms ease;
-  }
-  .indicator li:last-child {  margin-right: 0;}
-  .indicator li a{
-    display: block;
-    width: 100%; height: 100%;
-    background-color: var(--color-bhc-white);
-    border-radius: 2rem;
-    box-sizing: border-box;
-    box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
+.ad_area>.adUl {
+  width: 100%;
+  height: 100%;
+}
+
+.ad_area>.adUl li {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.adUl li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  text-align: center;
+}
+
+.ad_btn_before a,
+.ad_btn_next a {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+}
+
+.ad_btn_before a {
+  left: 5%;
+  background-image: url("../../../res/icon/SVG/left.svg");
+}
+
+.ad_btn_next a {
+  right: 5%;
+  background-image: url("../../../res/icon/SVG/right.svg");
+}
+
+/* .indicator  */
+.indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.indicator {
+  display: inline-block;
+  /* text-align: center; */
+  width: auto;
+  height: auto;
+  padding: 0.3rem;
+}
+
+.indicator li {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+  transition: all 200ms ease;
+}
+
+.indicator li:last-child {
+  margin-right: 0;
+}
+
+.indicator li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bhc-white);
+  border-radius: 2rem;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
     3px 3px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  .indicator li.act  { width:2rem;}
-  .indicator li.act a{ background-color: var(--color-bhc-yellow);
-    box-shadow:1px 1px 3px rgba(255, 255, 255, 0.8),
+}
+
+.indicator li.act {
+  width: 2rem;
+}
+
+.indicator li.act a {
+  background-color: var(--color-bhc-yellow);
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8),
     -2px -2px 3px rgba(0, 0, 0, 0.8);
-  transition: all 300ms linear; }
-  .indicator a:hover { box-shadow: 0.2rem 0.2rem 0.2rem #171717;}
-  .indicator a:focus {outline:0; border: 0.2rem solid #171717; }
+  transition: all 300ms linear;
+}
+
+.indicator a:hover {
+  box-shadow: 0.2rem 0.2rem 0.2rem #171717;
+}
+
+.indicator a:focus {
+  outline: 0;
+  border: 0.2rem solid #171717;
+}
 
 /* ckmenuBox ----------------------------------------- */
 #ckmenuBox {
@@ -114,77 +141,91 @@
   box-sizing: border-box;
 }
 
-  #ckmenu_area {
-    position: relative;
-    width: 100%;
-    background-color: var(--color-bhc-white);
-    box-sizing: border-box;
-    box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
-      6px 6px 8px rgba(0, 0, 0, 0.1); 
-  }
-  .ckmenu_list {
-    position: absolute; left: 50%; top: 20%;
-    transform: translateX(-50%);
-  }
+#ckmenu_area {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bhc-white);
+  box-sizing: border-box;
+  box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
+    6px 6px 8px rgba(0, 0, 0, 0.1);
+}
 
-   .ckmenu_list > ul { 
-     width: 100%;
-     height: auto;
-   }
-   .ckmenu_list > ul > li {
-    float: left;
-    width: 33.333%;
-    height: 280px;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: 0 0;
-    text-align: center;
-    font-family: 'Malgun Gothic';
-    font-size: var(--font-size5-);
-   }
+.ckmenu_list {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
 
-   .ckmenu_list > ul > li:nth-child(1){
-     background-image: url("../../../res/image/chicken/골드킹_410x271.png");
-   }
-   .ckmenu_list > ul > li:nth-child(2){
-    background-image: url("../../../res/image/chicken/뿌링맵소킹\ 한마리\ 누끼sm.png");
-  }
-  .ckmenu_list > ul > li:nth-child(3){
-    background-image: url("../../../res/image/chicken/뿌링클_410x271.png");
+.ckmenu_list>ul {
+  width: 100%;
+  height: auto;
+}
 
-  }
+.ckmenu_list>ul>li {
+  float: left;
+  width: 33.333%;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  text-align: center;
+  font-family: 'Malgun Gothic';
+  font-size: var(--font-size5-);
+}
+
+.ckmenu_list>ul>li:nth-child(1) {
+  background-image: url("../../../res/image/chicken/ck1.png");
+}
+
+.ckmenu_list>ul>li:nth-child(2) {
+  background-image: url("../../../res/image/chicken/ck2.png");
+}
+
+.ckmenu_list>ul>li:nth-child(3) {
+  background-image: url("../../../res/image/chicken/ck3.png");
+
+}
+
 /* videoBox -------------------------------------------------- */
 #video_area {
   position: relative;
   width: 100%;
   height: auto;
 }
-  #player {
-    position: absolute;
-    top: 0; left: 50%; transform: translateX(-50%); 
-    width: 640px;
-    height: 360px;
-    box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
-    6px 6px 8px rgba(0, 0, 0, 0.1); ;
-  }
+
+#player {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 640px;
+  height: 360px;
+  box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
+    6px 6px 8px rgba(0, 0, 0, 0.1);
+  ;
+}
 
 /* bhc_info -------------------------------------------------- */
 
 /* 고정 배경화면 */
 #bhc_info {
-  position: relative; z-index: 100;
+  position: relative;
+  z-index: 100;
   width: 100%;
   height: auto;
   margin-top: 250px;
 }
 
-#noticeBox{
+#noticeBox {
   width: 100%;
   height: auto;
 }
 
-#noticeBox > ul > li {
-  position: absolute; top :0%; z-index: 100;
+#noticeBox>ul>li {
+  position: absolute;
+  top: 0%;
+  z-index: 100;
   width: 26.333%;
   height: 250px;
   background-color: #111;
@@ -192,36 +233,45 @@
   padding: 2rem 4rem;
   border-radius: 2rem 2rem 0 0;
 }
-#noticeBox > ul > li > dl > dt {
+
+#noticeBox>ul>li>dl>dt {
   text-align: center;
   font-size: 32px;
   margin-bottom: 20px;
   font-family: 'BM HANNA Pro';
 }
-#noticeBox > ul > li> dl > dd {
+
+#noticeBox>ul>li>dl>dd {
   color: var(--color-white);
   font-family: 'Malgun Gothic';
   line-height: 1.6rem;
 }
 
 
-#noticeBox > ul > li:nth-child(1) {
-  left: 10%; background-color: var(--color-bhc-green2);
-}
-#noticeBox > ul > li:nth-child(2) {
-  left: 50%; transform:translateX(-50%); background-color: var(--color-bhc-brown)
-}
-#noticeBox > ul > li:nth-child(3) {
-  right: 10%; background-color:var(--color-bhc-yellow);
+#noticeBox>ul>li:nth-child(1) {
+  left: 10%;
+  background-color: var(--color-bhc-green2);
 }
 
-#noticeBox > ul > li:hover{
-  top : -15%
+#noticeBox>ul>li:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-bhc-brown)
+}
+
+#noticeBox>ul>li:nth-child(3) {
+  right: 10%;
+  background-color: var(--color-bhc-yellow);
+}
+
+#noticeBox>ul>li:hover {
+  top: -15%
 }
 
 
 .about {
-  position: relative; z-index: 200;
+  position: relative;
+  z-index: 200;
   width: 100%;
   height: 500px;
   margin-top: 30px;
@@ -240,12 +290,13 @@
   color: var(--color-bhc-white);
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
 }
+
 /* .about::before{
   content:""; 
   display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);
 } */
 
-.about >  p {
+.about>p {
   width: 80%;
   margin: auto;
   margin-top: 50px;
@@ -263,13 +314,14 @@
   margin-top: -100px;
 }
 
-#snsBox{
+#snsBox {
   width: 100%;
   height: auto;
 }
 
-#snsBox > ul > li {
-  position: absolute; top: 0;
+#snsBox>ul>li {
+  position: absolute;
+  top: 0;
   width: 33.333%;
   height: 300px;
   box-sizing: border-box;
@@ -277,21 +329,31 @@
   border-radius: 0 0 2rem 2rem;
 }
 
-#snsBox > ul > li:nth-child(1) {left: -5%;}
-#snsBox > ul > li:nth-child(2) {left: 50%; transform:translateX(-50%)}
-#snsBox > ul > li:nth-child(3) {right: -5%;}
+#snsBox>ul>li:nth-child(1) {
+  left: -5%;
+}
 
-#snsBox > ul > li > button {
+#snsBox>ul>li:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+#snsBox>ul>li:nth-child(3) {
+  right: -5%;
+}
+
+#snsBox>ul>li>button {
   display: block;
-  width: 80px; height: 80px;
+  width: 80px;
+  height: 80px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
   margin: auto;
 }
 
-.facebook ,
-.instargram ,
+.facebook,
+.instargram,
 .kakao {
   width: 100%;
   height: 100%;
@@ -300,32 +362,35 @@
   background-position: 0 0;
 }
 
-.facebook_icon{
+.facebook_icon {
   background-image: url('../../../res/image/btn_facebook_main.png');
 }
+
 .facebook {
   background-image: url('../../../res/image/event1.png')
 }
-.instargram_icon{ 
+
+.instargram_icon {
   background-image: url('../../../res/image/btn_instagram_main.png');
 }
+
 .instargram {
   background-image: url('../../../res/image/event2.jpg')
 }
 
-.kakao_icon{
+.kakao_icon {
   background-image: url('../../../res/image/btn_kakaoplus_main.png');
 }
+
 .kakao {
   background-image: url('../../../res/image/event3.jpg')
 }
 
-#snsBox > ul > li > div {
+#snsBox>ul>li>div {
   width: 100%;
   height: 500px;
   border-radius: 0 0 2rem 2rem;
   background-color: var(--color-bhc-white);
   box-shadow: -5px -5px 8px rgba(255, 255, 255, 1),
-      6px 6px 8px rgba(0, 0, 0, 0.1); 
+    6px 6px 8px rgba(0, 0, 0, 0.1);
 }
-
