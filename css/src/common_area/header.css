@@ -69,7 +69,6 @@ abbr {
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease-in;
 }
 
 .main_menu>li:hover .sub_menu,
@@ -92,12 +91,42 @@ abbr {
   text-decoration: underline;
 }
 
-.nav_btn {
+.nav_btn_box {
   float: right;
+  width: auto; height: auto;
+}
+.nav_btn {
+  width:40px; height: 40px;
   background-image: url("../../../res/icon/SVG/menu.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 0;
+
+}
+.nav_box_side {
+  display: none;
+  position: absolute; right: 0;
+  width: 33.3333%; height: 1000px;
+  background-color: #f2f2f2;
+  padding-left:10%; box-sizing: border-box;
+}
+
+.main_menu2>li {
+  position: relative;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 0.725rem;
+  color: var(--color-bhc-font1);
+  font-family: 'Malgun Gothic';
+  font-size: var(--font-size1-);
+}
+
+
+.main_menu2>li:hover .sub_menu,
+.main_menu2>li:focus .sub_menu {
+  position: relative; right: 10%;
+  visibility: visible;
+  opacity: 1;
 }
 
 .searchBox {
@@ -134,6 +163,11 @@ abbr {
   transition: all 0.3s ease;
   font-family: 'Malgun Gothic';
   font-size: var(--font-size-1);
+}
+
+.userBox a {
+  width: 40px;
+  height: 40px;
 }
 
 .login_ico {
@@ -245,7 +279,7 @@ abbr {
     margin-top: -10px;
   }
 
-  .nav_btn {
+  .nav_btn_box {
     width: 30px;
     height: 30px;
     margin-right: 10px;
@@ -299,7 +333,7 @@ abbr {
     height: 10.41667vw;
   }
 
-  .nav_btn {
+  .nav_btn_box {
     width: 40px;
     margin-top: 10px;
   }
@@ -349,7 +383,7 @@ abbr {
     height: 50px;
   }
 
-  .nav_btn {
+  .nav_btn_box {
     width: 40px;
     margin-top: 10px;
   }
@@ -409,7 +443,7 @@ abbr {
     width: 110px;
   }
 
-  .nav_btn {
+  .nav_btn_box {
     display: none;
   }
 
@@ -465,7 +499,7 @@ abbr {
     line-height: 50px;
   }
 
-  .nav_btn {
+  .nav_btn_box {
     display: none;
   }
 
@@ -475,7 +509,7 @@ abbr {
   }
 
   .userBox {
-    width: 150px;
+    width: 50px;
     height: 50px;
   }
 

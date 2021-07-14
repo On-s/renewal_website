@@ -94,6 +94,10 @@
     height: 50%;
 }
 
+.store_concept img:hover {
+    transform: translate(1.2);
+}
+
 
 /* bhc만의 경쟁력 */
 #competitiveness {

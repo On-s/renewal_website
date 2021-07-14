@@ -61,12 +61,39 @@ setTimeout(() => {
   userBg.on('click',function(e) {
     e.preventDefault();
     ckStatusPopup();
-  })
+  });
 
   userClose.on('click',function(e) {
     e.preventDefault();
     ckStatusPopup();
+  });
+
+  var navSide = $('.nav_box_side');
+  var navBtn = $('.nav_btn');
+
+  function ckNavMenuStatus() {
+    var statusCon = Boolean(navSide.css('display') === 'none');
+
+    if (statusCon) {
+      navSide.css('display', 'block');
+    } else {
+      navSide.css('display', 'none');
+    }
+  };
+
+
+  navBtn.on('click',function(e) {
+    e.preventDefault();
+    ckNavMenuStatus();
+    console.log('click');
+  });
+// 1280 보다 커지면 none 처리
+  $(window).on('resize',function () {
+    var winwidth = window.innerWidth;
+    console.log(winwidth);
+
+    if (winwidth >= 1280) {
+      navSide.css('display', 'none');
+    }
   })
-
-
 }, 10);
