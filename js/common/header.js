@@ -70,23 +70,29 @@ setTimeout(() => {
 
   var navSide = $('.nav_box_side');
   var navBtn = $('.nav_btn');
+  var navBg = $('.navbg');
 
   function ckNavMenuStatus() {
     var statusCon = Boolean(navSide.css('display') === 'none');
+    var statusBg = Boolean(userCon.css('display') === 'none');
 
-    if (statusCon) {
+    if (statusCon && statusBg) {
       navSide.css('display', 'block');
+      navBg.css('display', 'block');
     } else {
       navSide.css('display', 'none');
+      navBg.css('display', 'none');
     }
   };
-
 
   navBtn.on('click',function(e) {
     e.preventDefault();
     ckNavMenuStatus();
     console.log('click');
   });
+  navBg.on('click',function (e) {
+    ckNavMenuStatus();
+  })
 // 1280 보다 커지면 none 처리
   $(window).on('resize',function () {
     var winwidth = window.innerWidth;
@@ -94,6 +100,7 @@ setTimeout(() => {
 
     if (winwidth >= 1280) {
       navSide.css('display', 'none');
+      navBg.css('display', 'none');
     }
   })
-}, 10);
+}, 15);
