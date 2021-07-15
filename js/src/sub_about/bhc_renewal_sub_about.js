@@ -84,6 +84,7 @@ setTimeout(function () {
       comp_box.find('div').eq(_this).siblings().css({display : 'none'});
     })
 
+    // 마우스 올릴때 같은 이벤트
 
     compLink.on('mouseenter',function (e) {
       e.preventDefault();

@@ -2,7 +2,7 @@
 // flie name : header
 //-------------------------------------
 // html 이 import 된 후에 불러져야 각각의 엘리먼트들을 찾을 수 있다.
-setTimeout(() => {
+setTimeout(() => {  //settimeout 
   var search_btn = $('.search_btn');
 
   console.log(search_btn);

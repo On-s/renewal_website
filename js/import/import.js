@@ -17,6 +17,7 @@ jQuery.event.special.touchstart = {
      }
 };
 
+// html 추가
 (function ($) {
      var header = $('header');
      header.load('./headBox.html');
