@@ -17,6 +17,7 @@
     background-color: var(--color-bhc-brown3);
     margin-top: 150px;
     padding-top: 80px; box-sizing: border-box;
+    
 }
 
 .ceog_box{
@@ -29,6 +30,7 @@
     margin: auto;
     background-color:#fff;
     border-radius: 0 0 2rem 2rem;
+    overflow: hidden;
 }
 .ceog_box div:last-child {
     margin-top: 50px;
@@ -54,7 +56,8 @@
     height: 500px;
     margin: auto;
     margin-top: 150px;
-    background-color: #f32;
+    background-color: #fff;
+    overflow: hidden;
 }
 
 .bhc_bl {
@@ -78,12 +81,10 @@
     padding: 20px 50px; box-sizing: border-box;
 }
 .bhc_bl_img p{
-    float: right;
-    margin-right: 100px;
-}
-.bhc_bl_img p {
+    padding-left: 25%;
     margin-bottom: 20%;
 }
+
 .store_concept {
     float: right;
     width: 20%;
@@ -103,11 +104,62 @@
 #competitiveness {
     width: 80%;
     max-width: 1280px;
-    height: 250px;
+    height: 600px;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
     background-color: #666;
 }
+
+.comp_link_box {
+    width: 100%;
+    height: auto;
+    background-color: #111;
+}
+.comp_link_box ul {
+    width: 50%;
+    margin: auto;
+}
+
+.comp_link_box li a{
+    float: left;
+    width: 100px; 
+    height: 100px;
+    text-align: center;
+    padding: 20px; box-sizing: border-box;
+    border-radius: 5rem;
+    margin-right: 50px;
+}
+.comp_box {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    text-align: center;
+}
+.comp0 ,.comp1 ,.comp2 ,.comp3 {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    padding: 50px; box-sizing: border-box;
+    overflow: hidden;
+}
+.comp_box dt {
+    font-size: var(--font-size2-);
+    padding: 20px;
+}
+.comp_box dd {
+    text-align: left;
+    padding-left: 50px;
+    line-height: 1.5rem;
+}
+.comp_link_box li:nth-child(1) a {  background-color: var(--color-bhc-yellow);}
+.comp_link_box li:nth-child(2) a {  background-color: var(--color-bhc-orenge2);}
+.comp_link_box li:nth-child(3) a {  background-color: var(--color-bhc-red2);}
+.comp_link_box li:nth-child(4) a {  background-color: var(--color-bhc-red3);}
+
+.comp0 { background-color: var(--color-bhc-yellow);}
+.comp1 { background-color: var(--color-bhc-orenge2);}
+.comp2 { background-color: var(--color-bhc-red2); color: #fff;}
+.comp3 { background-color: var(--color-bhc-red3); color: #fff;}
 
 /* 채용문의 */
 #recruitment {

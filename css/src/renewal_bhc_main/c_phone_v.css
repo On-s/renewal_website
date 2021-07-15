@@ -110,7 +110,11 @@
     padding: 10px 5px;
     height: 600px;
   }
-  .about >  p {margin-top: 20px;}
+  
+  .about p {
+    margin-top: 20px;
+    font-size: 16px;
+  }
   /* sns_area ----------------------------------------- */
   #sns_area {
     width: 80%;

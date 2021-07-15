@@ -107,6 +107,10 @@
   .about{
     padding: 10px 5px;
   }
+
+  .about p {
+    font-size: 16px;
+  }
   /* sns_area ----------------------------------------- */
   #sns_area {
     width: 80%;

@@ -1,6 +1,7 @@
 //jQuery ------------------------------
 // flie name : header
 //-------------------------------------
+// html 이 import 된 후에 불러져야 각각의 엘리먼트들을 찾을 수 있다.
 setTimeout(() => {
   var search_btn = $('.search_btn');
 
@@ -41,57 +42,49 @@ setTimeout(() => {
   var userClose = $('.user_close');
   var userBg = $('.user_bg');
 
-  function ckStatusPopup() {
-    var statusCon = Boolean(userCon.css('display') === 'none');
-    var statusBg = Boolean(userCon.css('display') === 'none');
+  // Fn check display status
+  function ckStatusPopup(a,b) {
+
+    var statusCon = Boolean(a.css('display') === 'none');
+    var statusBg = Boolean(b.css('display') === 'none');
 
     if (statusCon && statusBg) {
-      userCon.css('display', 'block');
-      userBg.css('display', 'block');
+      a.css('display', 'block');
+      b.css('display', 'block');
     } else {
-      userCon.css('display', 'none');
-      userBg.css('display', 'none');
+      a.css('display', 'none');
+      b.css('display', 'none');
     }
   };
+
+  // 로그인 버튼 이벤트
   userBtn.on('click', function (e) {
     e.preventDefault();
-    ckStatusPopup();
+    ckStatusPopup(userCon,userBg);
   });
 
   userBg.on('click',function(e) {
     e.preventDefault();
-    ckStatusPopup();
+    ckStatusPopup(userCon,userBg);
   });
 
   userClose.on('click',function(e) {
     e.preventDefault();
-    ckStatusPopup();
+    ckStatusPopup(userCon,userBg);
   });
 
   var navSide = $('.nav_box_side');
   var navBtn = $('.nav_btn');
   var navBg = $('.navbg');
 
-  function ckNavMenuStatus() {
-    var statusCon = Boolean(navSide.css('display') === 'none');
-    var statusBg = Boolean(userCon.css('display') === 'none');
-
-    if (statusCon && statusBg) {
-      navSide.css('display', 'block');
-      navBg.css('display', 'block');
-    } else {
-      navSide.css('display', 'none');
-      navBg.css('display', 'none');
-    }
-  };
-
+  // 네비버튼 이벤트
   navBtn.on('click',function(e) {
     e.preventDefault();
-    ckNavMenuStatus();
+    ckStatusPopup(navSide,navBg);
     console.log('click');
   });
   navBg.on('click',function (e) {
-    ckNavMenuStatus();
+    ckStatusPopup(navSide,navBg);
   })
 // 1280 보다 커지면 none 처리
   $(window).on('resize',function () {
@@ -103,4 +96,4 @@ setTimeout(() => {
       navBg.css('display', 'none');
     }
   })
-}, 15);
+}, 50);

@@ -13,20 +13,21 @@
     --color-bhc-white   : #F2F2F2;
     --color-bhc-yellow  : #F2B035;
     --color-bhc-orenge  : #ffc690;
+    --color-bhc-orenge2 : #ff7200;
     --color-bhc-brown   : #D97014;
     --color-bhc-brown2  : #BF5B04;
     --color-bhc-brown3  : #591902;
     --color-bhc-red     : #BF3604;
+    --color-bhc-red2    : #ff2e41;
+    --color-bhc-red3    : #f10519;
     --color-bhc-green   : #93A603;
     --color-bhc-green2  : #667302;
 
     --color-bhc-font1   : #CF5D00;
     
     /* #D95000 */
-    /* --color-bhc-font2   : ; */
-    /* --color-bhc-font3 :  */
 }
-
+/* divece size */
 /* @media screen and (max-width:479px) { }
 @media screen and (min-width:480px) and (max-width:767px) { }
 @media screen and (min-width:768px) and (max-width:1279px) { }
