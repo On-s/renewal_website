@@ -187,3 +187,26 @@
     line-height: 50px;
     box-sizing: border-box;
 }
+
+.bhc_map {
+    width: 50%;
+    float: left;
+}
+
+.bhcinfo_box {
+    width: 50%;
+    float: right;
+}   
+.bhcinfo_box  dt{
+    padding: 10px;
+    margin-left: 50px;
+    border-left: 2px solid var(--color-bhc-red);
+    font-size: var(--font-size4-);
+    font-weight: bold;
+}
+.bhcinfo_box  dt:first-child {
+    margin-top: 100px;
+}
+.bhcinfo_box dd {
+    text-align: center;
+}

@@ -73,7 +73,6 @@ setTimeout(function () {
     for (var i = 0; i < 4; i++) {
       eval("var comp"+i+ "= competitiveness.find('.comp" +i+"')");
     }
-    console.log(comp0.text());
 
     // comp0 1 2 3
     // 클릭시 하나를 제외하고 나머지 display none
@@ -94,10 +93,5 @@ setTimeout(function () {
     })
 
 
-
-
-
-
-
   })(jQuery); 
-}, 10); //settimeout *
+}, 100); //settimeout

@@ -20,7 +20,9 @@ jQuery.event.special.touchstart = {
 // html 추가
 (function ($) {
      var header = $('header');
-     header.load('./headBox.html');
+     header.load('./headBox.html',function() {
+          $('body').append('<script src="../js/common/header.js"></script>');
+     });
      var footer = $('footer');
      footer.load('./footBox.html');
 })(jQuery);
