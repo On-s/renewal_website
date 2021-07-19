@@ -34,3 +34,7 @@
   .none { display: none; }
 
   .black { display: block;}
+
+  .abbr:before{
+      content:"qustion and answer"; display: block; width: 0; height: 0; overflow: hidden;
+  }

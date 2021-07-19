@@ -81,7 +81,7 @@ setTimeout(function () {
       var _this = $(this).parent().index();
       comp_box.find('div').eq(_this).css({display : 'block'});
       comp_box.find('div').eq(_this).siblings().css({display : 'none'});
-    })
+    });
 
     // 마우스 올릴때 같은 이벤트
 
@@ -90,8 +90,6 @@ setTimeout(function () {
       var _this = $(this).parent().index();
       comp_box.find('div').eq(_this).css({display : 'block'});
       comp_box.find('div').eq(_this).siblings().css({display : 'none'});
-    })
-
-
+    });
   })(jQuery); 
 }, 100); //settimeout
