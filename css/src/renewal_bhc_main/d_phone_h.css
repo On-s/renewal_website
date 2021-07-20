@@ -103,6 +103,9 @@
   #noticeBox > ul > li:nth-child(3){
     display: none;
   }
+  #noticeBox > ul > li:hover {
+    top: -30%;
+  }
 
   .about{
     padding: 10px 5px;

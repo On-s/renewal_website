@@ -68,6 +68,9 @@ footer {
     margin-top: 50px;
     margin-top: 10.41667vw;
   }
+  .call_number {
+    display: none;
+  }
 }
 
 /* 768~1279 -------------------------------------------------------------- */
@@ -79,8 +82,7 @@ footer {
   }
 
   .call_number {
-    width: 150px;
-    right: 0%;
+    display: none;
   }
 }
 
