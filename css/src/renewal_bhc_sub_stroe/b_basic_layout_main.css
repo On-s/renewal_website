@@ -1,42 +1,42 @@
 .menu_part {
-    position: relative;
-    width: 80%;
-    height: auto;
-    margin: auto;
-    margin-top: 150px;
-    background-color: #666;  
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 150px;
+  background-color: #666;
 }
 
 /* .select_location {
 } */
 
 .select_location form {
-    float: left;
+  float: left;
 }
+
 .serarch_box {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .search_bar {
-    float: right;
-    border: 1px solid #aaa;
-    background-color: #aaa;
+  float: right;
+  border: 1px solid #aaa;
+  background-color: #aaa;
 }
 
 .ssearch_btn {
-    float: right;
-    background-color: #555;
+  float: right;
+  background-color: #555;
 }
 
 hr {
-        padding: 30px;
+  padding: 30px;
 }
 
-.store_list{
-    width: 80%;
-    height: 500px;
-    margin: auto;
-    background-color: #555;
+.store_list {
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  background-color: #555;
 }
-

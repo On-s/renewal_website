@@ -11,17 +11,17 @@
     padding-top: 80px;
     padding-top: 16.6667vw;
     margin-top: 30px;
-    }
-    .ad_area{
-        width: 100%;
-        height: 300px;
-        height: 83.33333vw;
-    }
+  }
 
+  .ad_area {
+    width: 100%;
+    height: 300px;
+    height: 83.33333vw;
+  }
 
   /* ckmenuBox ----------------------------------------- */
 
-   #ckmenuBox {
+  #ckmenuBox {
     width: 80%;
     height: 400px;
     height: 111.111111vw;
@@ -29,91 +29,108 @@
     padding: 20px 0;
     padding: 5.55556vw 0;
   }
-  .order_area{
+
+  .order_area {
     height: 40px;
     height: 11.111111vw;
-  } 
-    .phone_order , .search_store {
-      width: 80px;
-      height: 40px;
-      height: 11.111111vw;
-      line-height: 40px;
-      line-height: 11.111111vw;
-    }
+  }
+
+  .phone_order,
+  .search_store {
+    width: 80px;
+    height: 40px;
+    height: 11.111111vw;
+    line-height: 40px;
+    line-height: 11.111111vw;
+  }
 
   #ckmenu_area {
     width: 100%;
     height: 300px;
-    height: 83.33333vw ;
+    height: 83.33333vw;
     margin-top: 20px;
     padding: 50px 20px;
   }
 
-   .ckmenu_list {
-     width: 70%;
-     height: 200px;
-     height: 55.555555vw;
-   }
-   .ckmenu_list > ul > li {
-    width: 100%;
-   }
+  .ckmenu_list {
+    width: 70%;
+    height: 200px;
+    height: 55.555555vw;
+  }
 
-   .ckmenu_list > ul > li:nth-child(2){
+  .ckmenu_list>ul>li {
+    width: 100%;
+  }
+
+  .ckmenu_list>ul>li:nth-child(2) {
     display: none;
   }
-  .ckmenu_list > ul > li:nth-child(3){
-     display: none;
-   }
-   .ck_btn_before {
+
+  .ckmenu_list>ul>li:nth-child(3) {
+    display: none;
+  }
+
+  .ck_btn_before {
     width: 20px;
     height: 80px;
     height: 22.22222vw;
     margin-top: 80px;
     margin-top: 22.2222vw;
-   }
-   .ck_btn_next {
+  }
+
+  .ck_btn_next {
     width: 20px;
     height: 80px;
     height: 22.22222vw;
     margin-top: 80px;
     margin-top: 22.2222vw;
-   }
-    /* videoBox */
-    #video_area {
-      height: 250px;
-    }
-    #player{
-      width: 360px;
-      height: 200px;
-    }
+  }
+
+  /* videoBox */
+  #video_area {
+    height: 250px;
+  }
+
+  #player {
+    width: 360px;
+    height: 200px;
+  }
+
   /* bhc_info---------------------------------------------- */
   #bhc_info {
     width: 100%;
     height: 600px;
     padding: 10px 0;
   }
-  #noticeBox > ul > li {
+
+  #noticeBox>ul>li {
     width: 90%;
     height: 200px;
     height: 55.55555vw;
-    top : -5%;
+    top: -5%;
   }
-  #noticeBox > ul > li:nth-child(1){left: 5%;}
-  #noticeBox > ul > li:nth-child(2),
-  #noticeBox > ul > li:nth-child(3){
+
+  #noticeBox>ul>li:nth-child(1) {
+    left: 5%;
+  }
+
+  #noticeBox>ul>li:nth-child(2),
+  #noticeBox>ul>li:nth-child(3) {
     display: none;
   }
-  #noticeBox > ul > li:hover {
+
+  #noticeBox>ul>li:hover {
     top: -30%;
   }
 
-  .about{
+  .about {
     padding: 10px 5px;
   }
 
   .about p {
     font-size: 16px;
   }
+
   /* sns_area ----------------------------------------- */
   #sns_area {
     width: 80%;
@@ -122,17 +139,20 @@
     margin-top: 80px;
   }
 
-  #snsBox > ul > li {
+  #snsBox>ul>li {
     width: 90%;
     height: 80px;
     height: 22.22222vw;
     transform: translateX(10%);
   }
 
-  #snsBox > ul > li:nth-child(2),
-  #snsBox > ul > li:nth-child(3){
+  #snsBox>ul>li:nth-child(2),
+  #snsBox>ul>li:nth-child(3) {
     display: none;
   }
-  #snsBox > ul > li > button { margin-top: -20px;} 
+
+  #snsBox>ul>li>button {
+    margin-top: -20px;
+  }
 
 }

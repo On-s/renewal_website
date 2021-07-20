@@ -2,7 +2,7 @@
 // flie name : bhc_renewal_sub_StartUp
 //-------------------------------------
 
-
+window.onload = function() {
 $.ajax({
   url: "../res/data/startUpData.json",
   context: document.body
@@ -13,13 +13,20 @@ $.ajax({
   const startUpQnA = document.querySelector('#startUpQnA');
   const briefingSession = startUpQnA.querySelector('.briefing_session');
   const briefingDayInfo = briefingSession.querySelector('.briefing_day_info');
-
+  
   const bhcQnAInfo = startUpQnA.querySelector('.bhc_qna');
-
-
+  
+  
   // 함수를 각각 나눠서 쓰기
-
-
+  const titleName = document.querySelector('#titleName');
+  const title = titleName.querySelector('.title');
+  const selectMenu = titleName.querySelector('.select_menu');
+  const openInfo = selectMenu.querySelector('.open_info');
+  const startUpFna = selectMenu.querySelector('.start_upfna');
+  
+  const startup_box = document.querySelector('.startup_box');
+  const startUpSupport = startup_box.querySelector('#startUpSupport');
+  
 
   // Dl 생성 클래스
   class mDl {
@@ -47,10 +54,44 @@ $.ajax({
         }
       }
     }
-  }
+  };
+  // Object.keys(data)[0]
 
   const createbriefing = new mDl(briefingData, briefingDayInfo);
   const createbhc_qna = new mDl(faqData, bhcQnAInfo);
 
 
+  // display 상대 체크
+  class clickchangeInfo {
+    constructor(data1 , data2){
+      let getdata1attr = data1.getAttribute('display');
+      let getdata2attr = data2.getAttribute('display');
+
+      if (getdata1attr === 'none' && getdata2attr === 'block') {
+        data1.style.display = 'block';
+        data2.style.display = 'none';
+      }
+      data1.style.display = 'none';
+      data2.style.display = 'block';
+    }
+  }
+
+  // 이벤트 클릭 개설정보 
+  openInfo.addEventListener('click',function(e) {
+    e.preventDefault();
+    let checkinfo = new clickchangeInfo(startUpQnA,startUpSupport);
+    title.innerText = (Object.keys(data)[0]);
+  });
+  // 이벤트클릭 창업fna
+  startUpFna.addEventListener('click',function (e) {
+    e.preventDefault();
+    let checkinfo = new clickchangeInfo(startUpSupport,startUpQnA);
+    title.innerText = (Object.keys(data)[1]);
+  });
+
+
+  
+
+
 });
+}

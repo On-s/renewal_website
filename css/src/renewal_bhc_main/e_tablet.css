@@ -1,120 +1,154 @@
 /* renewal_bhc table 768~1279 */
 
 @media screen and (min-width:768px) and (max-width:1279px) {
-  
-    /* adBox ----------------------------------------- */
-    #adBox {
-      width: 100%;
-      width: 800px;
-      height: 500px;
-      padding-top: 100px;
-      margin-top: 50px;
-      margin: auto;
-      }
-      .ad_area{
-          width: 100%;
-          height: 500px;
-      }
 
-    /* ckmenuBox ----------------------------------------- */
-    #ckmenuBox {
-      width: 80%;
-      height: 300px;
-      margin-top: 50px;
-    }
-    .order_area{
-        height: 40px;
-      } 
-        .phone_order , .search_store {
-          width: 80px;
-          height: 40px;
-          line-height: 40px;
-        }
+  /* adBox ----------------------------------------- */
+  #adBox {
+    width: 100%;
+    width: 800px;
+    height: 500px;
+    padding-top: 100px;
+    margin-top: 50px;
+    margin: auto;
+  }
 
-    
-      #ckmenu_area {
-        width: 100%;
-        height: 300px;
-        margin-top: 20px;
-        padding: 0 20px;
-      }
-      .ckmenu_list {
-        width: 70%;
-        height: 300px;
-        margin-top: -30px;
-      }
-      .ckmenu_list > ul > li {
-       width: 50%;
-      }
-     .ckmenu_list > ul > li:nth-child(3){
-        display: none;
-      }
-      
-       .ck_btn_before {
-        width: 20px;
-        height: 80px;
-        margin-top: 150px;
-       }
-       .ck_btn_next {
-        width: 20px;
-        height: 80px;
-        margin-top: 150px;
-       }
-    /* videoBox */
-    #video_area {
-      height: 450px;
-      margin-top: 80px;
-    }
-    #player{
-      width: 640px;
-      height: 360px;
-    }
+  .ad_area {
+    width: 100%;
+    height: 500px;
+  }
 
-    /* bhc_info---------------------------------------------- */
-    #bhc_info {
-      width: 100%;
-      height: 600px;
-      margin-top: 150px;
-    }
-    #noticeBox > ul > li {
-      width: 40%;
-      height: 250px;
-      top : -12%
-    }
-    #noticeBox > ul > li:hover,
-    #noticeBox > ul > li:focus {
-    top : -35%
-    }
-    #noticeBox > ul > li:nth-child(1){left: 10%;}
-    #noticeBox > ul > li:nth-child(2){left: 70%;}
-    #noticeBox > ul > li:nth-child(3){display: none;}
-    
-    .about {
-      padding: 40px 20px;
-    }
+  /* ckmenuBox ----------------------------------------- */
+  #ckmenuBox {
+    width: 80%;
+    height: 300px;
+    margin-top: 50px;
+  }
 
-    .about >  p {margin-top: 50px;}
+  .order_area {
+    height: 40px;
+  }
 
-    /* sns_area ----------------------------------------- */
-    #sns_area {
-      width: 80%;
-      height: 300px;
-      margin-top: 50px;
-    }
-  
-    #snsBox > ul > li {
-      width: 40%;
-      height: 80px;
-    }
-    #snsBox > ul > li:nth-child(1){left: 10%;}
-    #snsBox > ul > li:nth-child(2){left:70%;}
-    #snsBox > ul > li:nth-child(3){
-      display: none;
-    }
-    #snsBox > ul > li > button { margin-top: -20px;} 
-    #snsBox > ul > li > div {
-      height: 350px;
-    }
-  
+  .phone_order,
+  .search_store {
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+
+  #ckmenu_area {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .ckmenu_list {
+    width: 70%;
+    height: 300px;
+    margin-top: -30px;
+  }
+
+  .ckmenu_list>ul>li {
+    width: 50%;
+  }
+
+  .ckmenu_list>ul>li:nth-child(3) {
+    display: none;
+  }
+
+  .ck_btn_before {
+    width: 20px;
+    height: 80px;
+    margin-top: 150px;
+  }
+
+  .ck_btn_next {
+    width: 20px;
+    height: 80px;
+    margin-top: 150px;
+  }
+
+  /* videoBox */
+  #video_area {
+    height: 450px;
+    margin-top: 80px;
+  }
+
+  #player {
+    width: 640px;
+    height: 360px;
+  }
+
+  /* bhc_info---------------------------------------------- */
+  #bhc_info {
+    width: 100%;
+    height: 600px;
+    margin-top: 150px;
+  }
+
+  #noticeBox>ul>li {
+    width: 40%;
+    height: 250px;
+    top: -12%
+  }
+
+  #noticeBox>ul>li:hover,
+  #noticeBox>ul>li:focus {
+    top: -35%
+  }
+
+  #noticeBox>ul>li:nth-child(1) {
+    left: 10%;
+  }
+
+  #noticeBox>ul>li:nth-child(2) {
+    left: 70%;
+  }
+
+  #noticeBox>ul>li:nth-child(3) {
+    display: none;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about>p {
+    margin-top: 50px;
+  }
+
+  /* sns_area ----------------------------------------- */
+  #sns_area {
+    width: 80%;
+    height: 300px;
+    margin-top: 50px;
+  }
+
+  #snsBox>ul>li {
+    width: 40%;
+    height: 80px;
+  }
+
+  #snsBox>ul>li:nth-child(1) {
+    left: 10%;
+  }
+
+  #snsBox>ul>li:nth-child(2) {
+    left: 70%;
+  }
+
+  #snsBox>ul>li:nth-child(3) {
+    display: none;
+  }
+
+  #snsBox>ul>li>button {
+    margin-top: -20px;
+  }
+
+  #snsBox>ul>li>div {
+    height: 350px;
+  }
+
 
 }

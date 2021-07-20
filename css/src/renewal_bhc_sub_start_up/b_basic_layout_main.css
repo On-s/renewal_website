@@ -1,142 +1,192 @@
 /* renewal_bhc_sub */
 
 
-.wrap{
-    width: 100%;
-    height: auto;
+.wrap {
+  width: 100%;
+  height: auto;
 }
 
 #titleName {
-    width: 80%;
-    height: 300px;
-    background-color: #aaa;
-    margin: auto;
-    margin-top: 100px;
-    padding: 20px;
-    box-sizing: border-box;
+  width: 80%;
+  height: 300px;
+  background-color: #aaa;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    line-height: 100px;
-    background-color: #543;
-    margin: auto;
-}
-h1 {
-    font-size: var(--font-size7-);
-}
-.select_menu ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 100px;
-    background-color: #a35;
-    margin: auto;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  line-height: 100px;
+  background-color: #543;
+  margin: auto;
 }
 
-.select_menu li{
-    float: left;
+h1 {
+  font-size: var(--font-size7-);
 }
+
+.select_menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: #a35;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.select_menu li {
+  float: left;
+}
+
 .startup_box {
-position: relative;
-   width: 80%;
-   height: 1800px;
-   margin: auto; 
-   /* overflow: hidden; */
+  position: relative;
+  width: 80%;
+  height: 1800px;
+  margin: auto;
+  /* overflow: hidden; */
 }
+
 #startUpSupport {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #17a200;
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #17a200;
 }
 
 #startUpQnA {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #534;
-}
-.delivery_t,.beerzone_t {
-    width: 80%;
-    height: auto;
-    padding: 50px;
-    margin: auto;
-}
-.delivery_t table, .beerzone_t table {
-    border-collapse: collapse;
-    margin: auto;
-}
-.delivery_t caption, .beerzone_t caption {
-    position: absolute;
-    left:15%;
-}
-tr,th,td{
-    border: 1px solid #000;
-    padding: 5px;
-}
-th,td {
-    width: 25%;
-    height: 30px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #534;
 }
 
-.procedure{
-    width: 600px;
-    height: 600px;
-    margin: auto;
-    background-image: url('../../../res/image/img_step.gif');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+.delivery_t,
+.beerzone_t {
+  width: 80%;
+  height: auto;
+  padding: 50px;
+  margin: auto;
+}
+
+.delivery_t table,
+.beerzone_t table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.delivery_t caption,
+.beerzone_t caption {
+  position: absolute;
+  left: 15%;
+}
+
+tr,
+th,
+td {
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+th,
+td {
+  width: 25%;
+  height: 30px;
+}
+
+.procedure {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+
 }
 
 .briefing_session {
-    width: 80%;
-    height: auto;
-    margin: auto;
-    padding: 50px;
-    background-color: #f2f;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 50px;
+  background-color: #f2f;
 }
 
 .bs_title {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    font-size: var(--font-size5-);
-    background-color: #fff;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: var(--font-size5-);
+  background-color: #fff;
 }
 
-.bs_title .fontup{
-    font-size:  var(--font-size7-);
+.bs_title .fontup {
+  font-size: var(--font-size7-);
 }
+
 .bs_title p {
-    color: yellowgreen;
+  color: yellowgreen;
 }
 
 .briefing_day_info dl {
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 20px;
 }
+
 .briefing_day_info dt {
-    margin-left: 20%;
-    margin-right: 20px;
-    font-weight: bold;
-    font-size: var(--font-size2-);
-    border-right: 1px solid #353;
-    padding: 10px; box-sizing: border-box;
+  margin-left: 20%;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: var(--font-size2-);
+  border-right: 1px solid #353;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .briefing_day_info dd {
-    padding: 10px;
+  padding: 10px;
 }
 
 
+.bhc_qna {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 150px;
+  background-color: #ccc;
+}
+
+.bhc_qna dl {
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.bhc_qna dt::before {
+  content: " Q ";
+  background-color: #fff;
+}
+
+.bhc_qna dt {
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  font-size: var(--font-size3-);
+}
+
+.bhc_qna dd::before {
+  content: " A ";
+  background-color: #2f2f2f;
+  color: #f2f2f2;
+}
+
+
+.bhc_qna dd {
+ display: none;
+  height: auto;
+}
