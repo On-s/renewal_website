@@ -217,6 +217,13 @@
   background-color: #5f6;
 }
 
+#recruitment iframe {
+  width : 600px;
+  height: 450px;
+  border:0;
+  padding: 30px;
+}
+
 #sideNav {
   left: 50%;
   top: 10%;
