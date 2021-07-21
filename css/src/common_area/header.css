@@ -114,7 +114,6 @@ abbr {
 
 .main_menu2>li {
   position: relative;
-  top: 0;
   margin-top: 20px;
   margin-right: 0.725rem;
   color: var(--color-bhc-font1);

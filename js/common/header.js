@@ -13,6 +13,7 @@
       searchbar.animate({
         width: '300px'
       });
+      searchbar.focus();
     } else {
       searchbar.val('');
       searchbar.animate({

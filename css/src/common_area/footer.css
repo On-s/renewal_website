@@ -18,12 +18,12 @@ footer {
 .company_area>ul {
   width: 100%;
   height: auto;
+  margin-top: 1.2rem;
 }
 
 .company_area>ul>li {
   float: left;
   padding: 10px 20px;
-  border-left: 3px solid var(--color-bhc-brown3);
   font-size: 0.5rem;
 }
 
