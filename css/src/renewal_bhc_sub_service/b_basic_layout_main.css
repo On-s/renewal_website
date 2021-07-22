@@ -67,3 +67,26 @@
 
 .product {display: block; background-color: #555;}
 .order {display: none; background-color: #777;}
+
+.qna_box dt {
+    padding: 20px;
+}
+
+.qna_box dt::before{
+    content: 'Q';
+    background-color: #fff;
+    padding: 5px; box-sizing: border-box;
+}
+
+.qna_box dd {
+    display: none;
+    padding: 5px;
+}
+
+.qna_box dd::before {
+    content: 'A';
+    color: #fff;
+    background-color: #000;
+    padding: 5px; box-sizing: border-box;
+}
+
