@@ -96,21 +96,20 @@ window.onload = function () {
 
     // 배열에 형제노드들을 저장
     class GetSelectArray {
-      constructor(t) {
-        let children = t.parentElement.children;
+      constructor(temp) {
+        let children = temp.parentElement.children;
         let tempArr = [];
 
         for (let i = 0; i < children.length; i++) {
           tempArr.push(children[i]);
         }
         return tempArr.filter(function (e) {
-          return e = t;
+          return e = temp;
         });
       }
     };
 
     let dlData = new GetSelectArray(qnaDl);
-    
 
     const setDataDt = function (dataEl, index) {      
       dataEl.forEach((d, i) => {

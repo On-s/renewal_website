@@ -15,6 +15,7 @@ const proBtn = menuCon.querySelector('.pro_btn');
 const ordBtn = menuCon.querySelector('.ord_btn');
 
 
+
 // IE 버전이낮으면 불러올수없기에 바꿔줌
 if (window.XMLHttpRequest) {
   jsonData = new XMLHttpRequest();
@@ -27,11 +28,12 @@ function mDl(data, position) {
   for (let i = 0; i < data.length; i++) {
     let mDl = document.createElement('dl');
     let con = `<dt>${data[i].question}</dt><dd>${data[i].answer}</dd>`;
-    console.log(data[i].question);
     mDl.innerHTML = con;
     position.appendChild(mDl);
   }
 }
+
+
 
 // display 상태체크 함수 
 function clickchange(data1, data2) {
@@ -42,11 +44,35 @@ function clickchange(data1, data2) {
   let getdata2attr = data2.getAttribute('display');
 
   if (getdata1attr === 'none' && getdata2attr === 'block') {
-    data1.style.display = 'block';
-    data2.style.display = 'none';
+    data1st.display = 'block';
+    data2st.display = 'none';
   }
   data1st.display = 'none';
   data2st.display = 'block';
+}
+
+function sibilings(temp) {
+  let children = temp.parentElement.children;
+  let tempArr = [];
+  for (let i = 0; i < children.length; i++) {
+    tempArr.push(children[i]);
+  }
+  return tempArr.filter(function (e) {
+    return  e != temp;
+  });
+}
+
+function setEventDt(len,positon) {
+  for (let i = 0; i < len.length; i++) {
+    let dlEvent = positon.getElementsByTagName('dl')[i];
+    let sibilingDl = new sibilings(dlEvent);
+    dlEvent.querySelector('dt').addEventListener('click',function(e) {
+      dlEvent.querySelector('dd').style.display = 'block';
+      sibilingDl.forEach(function(data) {
+        data.querySelector('dd').style.display = 'none';
+      });
+    });
+  }
 }
 
 
@@ -64,26 +90,24 @@ jsonData.onreadystatechange = function () {
     mDl(productData, product);
     mDl(orderData, order);
 
-    proBtn.addEventListener('click',function(e) {
+    const proDl = product.getElementsByTagName('dl')[1];
+    const ordDl = order.getElementsByTagName('dl')[0];
+
+    proBtn.addEventListener('click', function (e) {
       e.preventDefault();
       clickchange(order, product);
     });
 
-    ordBtn.addEventListener('click',function(e) {
+    ordBtn.addEventListener('click', function (e) {
       e.preventDefault();
       clickchange(product, order);
     });
-  }
-}
+
+    setEventDt(productData, product);
+    setEventDt(orderData, order);
+  } //if
+} //jsonData.onreadystatechange
+
 
 jsonData.open("GET", "../res/data/serviceData.json");
 jsonData.send();
-
-
-
-
-
-// console.log(jsonData.responseText);
-// JSON.parse(jsonData.responseText);
-// let serviceData;
-// console.log(serviceData);
