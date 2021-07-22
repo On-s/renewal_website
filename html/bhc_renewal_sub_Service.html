@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
-  <link rel="stylesheet" href="../css/src/renewal_bhc_sub_stroe/bhc_renewal_sub_stroe.css">
+  <link rel="stylesheet" href="../css/src/renewal_bhc_sub_service/bhc_renewal_sub_service.css">
 
   <script src="https://kit.fontawesome.com/2da153e261.js" crossorigin="anonymous"></script>
   <title>Renewal BHC</title>
@@ -30,16 +30,35 @@
     <header>
     </header>
     <!-- 메뉴부분 ============================================================ -->
-    <section>
-      <div class="service_search"> <h2><span class="blind">서비스검색</span></h2>
+    <section id="searchCon">
+      <div class="service_search_box">
+        <h2><span class="blind">서비스검색</span></h2>
         <form>
-            <label for="service_search_bar">검색
-              <input type="text" name="service_search_bar" class="service_search_bar" autofocus>
-            </label>
-
+          <label for="service_search_bar">검색
+            <input type="text" name="service_search_bar" class="service_search_bar" autofocus>
+          </label>
+          <i class="fas fa-search"></i>
         </form>
       </div>
-      <div> </div>
+
+    </section>
+    <!-- menuCon ============================================================ -->
+    <section id=menuCon>
+      <div class="menu_icon_box">
+        <button type="button"><i class="fas fa-drumstick-bite"></i>제품</button>
+        <button type="button"><i class="fas fa-truck"></i>주문/배달</button>
+      </div>
+    </section>
+    <!-- qnaCon ============================================================= -->
+    <section id="qnaCon">
+      <ul class="qna_box">
+        <li class="product">
+          <!-- <dl><dt>Q</dt><dd>A</dd></dl> -->
+        </li>
+        <li class="order">
+          <!-- <dl><dt>Q</dt><dd>A</dd></dl> -->
+        </li>
+      </ul>
     </section>
     <!-- footer ============================================================= -->
     <footer>
@@ -51,8 +70,9 @@
   <script src="../js/jquery/jquery-ui.min.js"></script>
   <script src="../js/import/import.js"></script>
   <script src="../js/common/header.js"></script>
+  <script src="../js/src/sub_Service/bhc_renewal_sub_Service.js"></script>
 
-  
+
 </body>
 
 </html>
