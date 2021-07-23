@@ -1,16 +1,9 @@
 // https://apis.map.kakao.com/web/guide/
 
  $.ajax({
-        url: "https://dapi.kakao.com/v2/local/search/address.json?query="+encodeURIComponent('제주'),
-        type : "GET",
-        context: document.body,
+        url: 'https://dapi.kakao.com/v2/local/search/address.json?query=' + encodeURIComponent('제주'),
         headers: {'Authorization' : 'KakaoAK a188dbedef505e9b3ea738775ed9f6c2'},
-        success:function(data){
-            console.log(data);
-        },
-        error : function(e){
-            console.log(e);
-        }
+        type : 'GET'
     }).done(function (data) {
 
         console.log(data);
