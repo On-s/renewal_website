@@ -26,6 +26,7 @@
   // search_btn.on('click',function() {
   //     console.log('click');
   // })
+  // 바닐라 자바에서는 이벤트를 하나씩밖에 사용하지 못한다.
   $(document).on('click focus',('.search_btn'), function (e) {
     e.preventDefault();
     var searchbar = $('.searchbar');
