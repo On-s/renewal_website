@@ -58,17 +58,17 @@ function sibilings(temp) {
     tempArr.push(children[i]);
   }
   return tempArr.filter(function (e) {
-    return  e != temp;
+    return e != temp;
   });
 }
 
-function setEventDt(len,positon) {
+function setEventDt(len, positon) {
   for (let i = 0; i < len.length; i++) {
     let dlEvent = positon.getElementsByTagName('dl')[i];
     let sibilingDl = new sibilings(dlEvent);
-    dlEvent.querySelector('dt').addEventListener('click',function(e) {
+    dlEvent.querySelector('dt').addEventListener('click', function (e) {
       dlEvent.querySelector('dd').style.display = 'block';
-      sibilingDl.forEach(function(data) {
+      sibilingDl.forEach(function (data) {
         data.querySelector('dd').style.display = 'none';
       });
     });

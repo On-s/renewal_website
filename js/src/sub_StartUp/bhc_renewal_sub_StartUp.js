@@ -111,15 +111,15 @@ window.onload = function () {
 
     let dlData = new GetSelectArray(qnaDl);
 
-    const setDataDt = function (dataEl, index) {      
+    const setDataDt = function (dataEl, index) {
       dataEl.forEach((d, i) => {
-        let el =  d.querySelector('dd').style; 
-        (i !== index) ? el.display = 'none' :  el.display = 'block';
+        let el = d.querySelector('dd').style;
+        (i !== index) ? el.display = 'none': el.display = 'block';
       });
-    };    
-    
+    };
+
     dlData.forEach((data, index) => {
-      data.querySelector('dt').addEventListener('click', function (e) {        
+      data.querySelector('dt').addEventListener('click', function (e) {
         // for(let i=0; i<dlData.length; i++ ){
         //   dlData[i].querySelector('dd').style.display = 'none';
         //   if(i === index){
@@ -128,11 +128,11 @@ window.onload = function () {
         // }
         setDataDt(dlData, index); //위에 포문 과 같은 함수
       });
-    });// dlData.forEach 
+    }); // dlData.forEach 
 
-    
+
 
 
 
   }); //ajax
-}// window.load
+} // window.load
