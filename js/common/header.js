@@ -26,7 +26,14 @@
   // search_btn.on('click',function() {
   //     console.log('click');
   // })
-  $(document).on('click',('.search_btn'), function (e) {
+  $(document).on('click focus',('.search_btn'), function (e) {
+    e.preventDefault();
+    var searchbar = $('.searchbar');
+    console.log('click search');
+    ckStatus(searchbar);
+  });
+
+  $(document).on('click',('.searchbar'), function (e) {
     e.preventDefault();
     var searchbar = $('.searchbar');
     console.log('click search');
