@@ -4,7 +4,7 @@
 
 const REST_API_KEY = '4ac0100e2dd3015d00795ce6c881021c';
  $.ajax({
-        url: 'https://dapi.kakao.com//v2/local/search/address.json?query=제주',
+        url: 'https://dapi.kakao.com//v2/local/search/address.json?query=제주 bhc',
         headers: {'Authorization' : 'KakaoAK' + REST_API_KEY},
         type : 'GET'
     }).done(function (data) {
