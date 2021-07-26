@@ -85,12 +85,18 @@ window.onload = function () {
       e.preventDefault();
       new clickchangeInfo(startUpQnA, startUpSupport);
       title.innerText = (Object.keys(data)[0]);
+      title.style.fontSize = '38px';
+      openInfo.parentElement.classList.add('act');
+      startUpFna.parentElement.classList.remove('act');
     });
     // 이벤트클릭 창업fna
     startUpFna.addEventListener('click', function (e) {
       e.preventDefault();
       new clickchangeInfo(startUpSupport, startUpQnA);
       title.innerText = (Object.keys(data)[1]);
+      title.style.fontSize = '38px';
+      startUpFna.parentElement.classList.add('act');
+      openInfo.parentElement.classList.remove('act');
     });
 
 

@@ -27,7 +27,7 @@
 }
 
 h1 {
-  font-size: var(--font-size7-);
+  font-size: var(--font-size6-);
 }
 
 .select_menu ul {
@@ -44,6 +44,10 @@ h1 {
 .select_menu li {
   float: left;
 }
+.select_menu li:focus, .select_menu li:hover {
+  transform: scale(1.1);
+  color: #333;
+}
 
 .startup_box {
   position: relative;
@@ -54,15 +58,15 @@ h1 {
 }
 
 #startUpSupport {
-  display: none;
+  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #17a200;
+  background-color: #f2f2f2;
 }
 
 #startUpQnA {
-  display: block;
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -190,4 +194,9 @@ td {
 .bhc_qna dd {
  display: none;
   height: auto;
+}
+
+.act {
+  transform: scale(1.1);
+  border: 2px groove #f2f2f2;
 }

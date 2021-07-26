@@ -67,6 +67,9 @@ function setEventDt(len, positon) {
     let dlEvent = positon.getElementsByTagName('dl')[i];
     let sibilingDl = new sibilings(dlEvent);
     dlEvent.querySelector('dt').addEventListener('click', function (e) {
+
+      let ddstatus = dlEvent.querySelector('dd').getAttribute('display');
+      console.log(e.getAttribute('display'));
       dlEvent.querySelector('dd').style.display = 'block';
       sibilingDl.forEach(function (data) {
         data.querySelector('dd').style.display = 'none';
@@ -96,11 +99,13 @@ jsonData.onreadystatechange = function () {
     proBtn.addEventListener('click', function (e) {
       e.preventDefault();
       clickchange(order, product);
+      console.log('pro');
     });
 
     ordBtn.addEventListener('click', function (e) {
       e.preventDefault();
       clickchange(product, order);
+      console.log('ord');
     });
 
     setEventDt(productData, product);

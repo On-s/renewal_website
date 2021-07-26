@@ -4,7 +4,7 @@
 #searchCon {
   width: 80%;
   height: auto;
-  background-color: #555;
+  background-color: var(--color-bhc-orenge);
   margin: auto;
   margin-top: 100px;
 }
@@ -29,25 +29,31 @@
   width: 80%;
   height: auto;
   margin: auto;
-  background-color: #888;
 }
 
 .menu_icon_box {
   width: 100%;
   height: 100px;
-  background-color: #f2f;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .menu_icon_box button {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
+  width: 200px;
+  height: 80px;
+  padding: 20px;
   margin: 10px;
+  border-radius: 0.75rem;
+}
+.pro_btn , .ord_btn {
+  background-color:#ddd;
 }
 
+.pro_btn:hover , .pro_btn:focus , .ord_btn:hover , .ord_btn:focus {
+  color: #fff;
+  background-color: var(--color-bhc-orenge2);
+}
 
 #qnaCon {
   width: 80%;
@@ -71,12 +77,10 @@
 
 .product {
   display: block;
-  background-color: #555;
 }
 
 .order {
   display: none;
-  background-color: #777;
 }
 
 .qna_box dt {
@@ -84,22 +88,37 @@
 }
 
 .qna_box dt::before {
-  width: 50px;
-  height: 50px;
   content: 'Q';
   background-color: #fff;
+  padding: 10px;
+  margin-right: 15px;
+  font-weight: 900;
+  border-radius: 2rem;
 }
 
 .qna_box dd {
   display: none;
   padding: 20px;
-  background-color: #5f2;
+  background-color: rgba(0, 0,0,0.2);
 }
 
 .qna_box dd::before {
-  width: 50px;
-  height: 50px;
   content: 'A';
   color: #fff;
-  background-color: #000;
+  margin-right: 15px;
+}
+.product dl,.order dl {
+  border-bottom: 2px groove rgba(255, 255, 255, 0.4);
+}
+
+.product dl:first-child , .order dl:first-child {
+  border-top: 2px groove var(--color-bhc-brown3);
+}
+
+.product dl:last-child , .order dl:last-child {
+  border-bottom: 2px groove var(--color-bhc-brown3);
+}
+.act {
+  color: #fff;
+  background-color: var(--color-bhc-orenge2);
 }

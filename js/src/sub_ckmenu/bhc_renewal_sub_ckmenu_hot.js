@@ -219,7 +219,7 @@ for (var n = -3; n >= 0; n++) {
     // main 에 ckdata 삽입----------------------------------
     function clikcenvet(i) {
       mainP.text(bhcdata[i].name);
-      mainPrice.text(bhcdata[i].price);
+      mainPrice.text('가격 : '+bhcdata[i].price);
       mainInfo.text(bhcdata[i].Info);
       minImg.attr('href', bhcdata[i].PopupLink);
       minImg.css({
