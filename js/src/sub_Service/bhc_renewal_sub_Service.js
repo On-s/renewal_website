@@ -69,7 +69,7 @@ function setEventDt(len, positon) {
     dlEvent.querySelector('dt').addEventListener('click', function (e) {
 
       let ddstatus = dlEvent.querySelector('dd').getAttribute('display');
-      console.log(e.getAttribute('display'));
+      // console.log(e.getAttribute('display'));
       dlEvent.querySelector('dd').style.display = 'block';
       sibilingDl.forEach(function (data) {
         data.querySelector('dd').style.display = 'none';
