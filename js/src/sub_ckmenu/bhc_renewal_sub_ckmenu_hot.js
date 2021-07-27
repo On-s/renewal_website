@@ -1,10 +1,8 @@
 //jQuery ------------------------------
 // flie name : bhc_renewal_sub_ckmenu
 //-------------------------------------
-for (var n = -3; n >= 0; n++) {
-  console.log(n);
-}
 
+// ajax로 데이터 가져오기
 (function ($) {
   $.ajax({
     url: "../res/data/bhcData.json",
@@ -15,6 +13,7 @@ for (var n = -3; n >= 0; n++) {
     var linkdata;
 
     linkdata = document.location.href.split("#")[1];
+    
     //  처음 시작할때 주소값에 따른 data set
     function checklinkdata(linkdata) {
       switch (linkdata) {

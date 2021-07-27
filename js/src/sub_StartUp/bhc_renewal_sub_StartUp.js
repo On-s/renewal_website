@@ -2,6 +2,7 @@
 // flie name : bhc_renewal_sub_StartUp
 //-------------------------------------
 
+// 온로드
 window.onload = function () {
   $.ajax({
     url: "../res/data/startUpData.json",

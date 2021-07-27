@@ -5,6 +5,7 @@
 setTimeout(function () {
   (function ($) {
 
+    // 변수
     var sideBox = $('#sideNav');
     var sidelink = sideBox.find('a');
     var speed = 300;
