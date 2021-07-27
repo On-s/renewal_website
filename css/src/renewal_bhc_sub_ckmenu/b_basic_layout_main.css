@@ -38,7 +38,7 @@
 
 #menuList {
     float: left;
-    width: 20%;
+    width: 20%; min-width: 100px;
     height: 800px;
     background-color: var(--color-bhc-orenge);
 }
@@ -52,7 +52,7 @@
 
 /* 서브 이미지 -------------------------------------------- */
 .sub_img {
-    width: 70%;
+    width: 70%; min-width: 800px;
     height: 250px;
     margin: auto;
     overflow-x: hidden;
@@ -117,7 +117,7 @@
 
 .main_img {
     position: relative;
-    width: 70%;
+    width: 70%; min-width: 800px;
     height: 500px;
     background-color:#a5a5a5;
     margin: auto;

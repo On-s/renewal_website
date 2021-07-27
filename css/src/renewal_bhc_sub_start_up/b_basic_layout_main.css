@@ -8,8 +8,8 @@
 
 #titleName {
   width: 80%;
+  min-width: 800px;
   height: 300px;
-  background-color: #aaa;
   margin: auto;
   margin-top: 100px;
   padding: 20px;
@@ -22,31 +22,32 @@
   width: 100%;
   height: auto;
   line-height: 100px;
-  background-color: #543;
+  background-color: var(--color-bhc-orenge);
   margin: auto;
 }
 
-h1 {
-  font-size: var(--font-size6-);
-}
 
 .select_menu ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   width: 100%;
   height: 100px;
-  background-color: #a35;
+  background-color: #ddd;
   margin: auto;
   margin-top: 10px;
 }
 
 .select_menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   float: left;
+  width: 50%;
+  height: 100%;
 }
-.select_menu li:focus, .select_menu li:hover {
-  transform: scale(1.1);
-  color: #333;
+
+.select_menu li:focus,
+.select_menu li:hover {
+  color: #fff;
+  background-color: var(--color-bhc-orenge2);
 }
 
 .startup_box {
@@ -58,19 +59,19 @@ h1 {
 }
 
 #startUpSupport {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2f2;
-}
-
-#startUpQnA {
   display: none;
   position: absolute;
   width: 100%;
+  min-width: 800px;
   height: 100%;
-  background-color: #534;
+}
+
+#startUpQnA {
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
 }
 
 .delivery_t,
@@ -90,7 +91,8 @@ h1 {
 .delivery_t caption,
 .beerzone_t caption {
   position: absolute;
-  left: 15%;
+  left: 0;
+  font-size: var(--font-size5-);
 }
 
 tr,
@@ -118,7 +120,7 @@ td {
   height: auto;
   margin: auto;
   padding: 50px;
-  background-color: #f2f;
+  background-color: var(--color-bhc-brown3);
 }
 
 .bs_title {
@@ -136,6 +138,10 @@ td {
 .bs_title p {
   color: yellowgreen;
   padding: 25px;
+}
+
+.briefing_day_info {
+  color: #f2f2f2;
 }
 
 .briefing_day_info dl {
@@ -165,17 +171,29 @@ td {
   height: auto;
   margin: auto;
   margin-top: 150px;
-  background-color: #ccc;
 }
 
 .bhc_qna dl {
   padding: 30px;
   box-sizing: border-box;
+  border-bottom: 2px groove rgba(255, 255, 255, 0.4);
+}
+
+.bhc_qna dl:first-child {
+  border-top: 2px groove var(--color-bhc-brown3);
+}
+
+.bhc_qna dl:last-child {
+  border-bottom: 2px groove var(--color-bhc-brown3);
 }
 
 .bhc_qna dt::before {
-  content: " Q ";
+  content: 'Q';
   background-color: #fff;
+  padding: 10px;
+  margin-right: 15px;
+  font-weight: 900;
+  border-radius: 2rem;
 }
 
 .bhc_qna dt {
@@ -183,20 +201,27 @@ td {
   box-sizing: border-box;
   font-size: var(--font-size3-);
 }
+.bhc_qna dt:hover , .bhc_qna dt:focus {
+  transform: scale(1.02);
+  opacity: 0.8;
+}
 
 .bhc_qna dd::before {
-  content: " A ";
-  background-color: #2f2f2f;
-  color: #f2f2f2;
+  content: ' A ';
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  margin-right: 15px;
 }
 
 
 .bhc_qna dd {
- display: none;
+  display: none;
   height: auto;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .act {
-  transform: scale(1.1);
-  border: 2px groove #f2f2f2;
+  color: #fff;
+  background-color: var(--color-bhc-orenge2);
 }

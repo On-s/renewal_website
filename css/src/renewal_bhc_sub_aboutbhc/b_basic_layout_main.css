@@ -1,3 +1,8 @@
+#wrap {
+  width: 100%; min-width: 1200px;
+  height: 100%;
+}
+
 .fontup0 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -13,7 +18,7 @@
 
 /* ceo 인사말 */
 #ceoGreetings {
-  width: 100%;
+  width: 100%; min-width: 1200px;
   height: 400px;
   background-color: var(--color-bhc-brown3);
   margin-top: 150px;
@@ -58,7 +63,7 @@
 
 /* 브랜드스토리 */
 #brandStroy {
-  width: 90%;
+  width: 90%; min-width: 1200px;
   max-width: 1440px;
   height: 500px;
   margin: auto;
@@ -113,7 +118,7 @@
 
 /* bhc만의 경쟁력 */
 #competitiveness {
-  width: 80%;
+  width: 80%; min-width: 1200px;
   max-width: 1280px;
   height: 600px;
   margin: auto;
@@ -209,7 +214,7 @@
 
 /* 채용문의 */
 #recruitment {
-  width: 80%;
+  width: 80%; min-width: 1200px;
   max-width: 1280px;
   height: 500px;
   margin: auto;

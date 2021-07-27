@@ -2,7 +2,7 @@
 
 
 #searchCon {
-  width: 80%;
+  width: 80%; min-width: 800px;
   height: auto;
   background-color: var(--color-bhc-orenge);
   margin: auto;
@@ -26,7 +26,7 @@
 }
 
 #menuCon {
-  width: 80%;
+  width: 80%; min-width: 800px;
   height: auto;
   margin: auto;
 }
@@ -56,7 +56,7 @@
 }
 
 #qnaCon {
-  width: 80%;
+  width: 80%; min-width: 800px;
   height: auto;
   margin: auto;
 }
