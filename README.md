@@ -23,6 +23,6 @@
 
 + sub_StartUp - ajax(jquery) , 바닐라 JS 로 구현
 
-+ sub_stroe - api 사용 (예정)
++ sub_stroe - api 
 
 + sub_Service - 바닐라 JS 로 구현

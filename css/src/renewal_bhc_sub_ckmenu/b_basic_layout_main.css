@@ -119,9 +119,10 @@
     position: relative;
     width: 70%; min-width: 800px;
     height: 500px;
-    background-color:#a5a5a5;
+    background-color:var(--color-bhc-orenge);
     margin: auto;
     margin-top: 50px;
+    border-radius: 2rem;
 }
 
  .img a {
@@ -139,15 +140,20 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    color: #222;
     font-size: var(--font-size5-);
+    font-weight: bolder;
 }
 .main_img .pirce {
     padding: 30px;
     box-sizing: border-box;
     text-align: center;
+    font-size: var(--font-size3-);
+    font-weight: 700;
 }
 
 .main_img .info {
+    width: 50%;
     padding-left: 200px;
     box-sizing: border-box;
 }
