@@ -33,8 +33,6 @@ function mDl(data, position) {
   }
 }
 
-
-
 // display 상태체크 함수 
 function clickchange(data1, data2) {
   let data1st = data1.style;
